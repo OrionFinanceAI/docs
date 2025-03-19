@@ -86,18 +86,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://discord.gg/flowfinance',
+            label: 'Discord',
             position: 'right',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        // style: 'dark',
         links: [
           {
             title: 'Discover',
@@ -131,10 +131,10 @@ const config = {
           },
         ],
       },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
+      // prism: {
+      //   theme: prismThemes.github,
+      //   darkTheme: prismThemes.dracula,
+      // },
     }),
 };
 
