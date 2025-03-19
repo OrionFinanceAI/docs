@@ -24,9 +24,17 @@ export default function Home() {
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      {/* <HomepageHeader /> */}
       <main>
         {/* <HomepageFeatures /> */}
+        <div className="container" style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '65vh'
+        }}>
+          <img src="/img/tagline_green.png" alt="Orion Finance Logo"/>
+        </div>
       </main>
     </Layout>
   );
