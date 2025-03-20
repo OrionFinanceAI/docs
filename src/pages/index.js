@@ -33,7 +33,7 @@ export default function Home() {
           alignItems: 'center',
           minHeight: '65vh'
         }}>
-          <img src="/img/tagline_green.png" alt="Orion Finance Logo"/>
+          <img src="/img/tagline_white.png" alt="Orion Finance Logo"/>
         </div>
       </main>
     </Layout>

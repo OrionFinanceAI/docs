@@ -4,11 +4,17 @@ This website is built using [Docusaurus](https://docusaurus.io/), a modern stati
 
 ### Installation
 
+First time in the repo
+
 ```
-$ yarn
+$ npx create-docusaurus@latest . classic
 ```
 
 ### Local Development
+
+```
+$ yarn
+```
 
 ```
 $ yarn start
