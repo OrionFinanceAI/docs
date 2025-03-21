@@ -45,3 +45,12 @@
   --ifm-footer-link-color: #ffffff;
   --ifm-footer-link-hover-color: #4196fd;
 }
+
+.menu__category {
+  padding-left: 13px; /* Adjust as needed */
+  font-weight: bold;  /* Optional: Make it stand out */
+}
+
+.menu__spacer {
+  margin-top: 5px;  /* Adds space between sections */
+}
