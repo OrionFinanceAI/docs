@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Orion Finance',
+  title: 'Orion Finance Docs',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -74,6 +74,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Orion Finance',
         logo: {
@@ -87,12 +92,12 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://discord.gg/flowfinance',
-            label: 'Discord',
-            position: 'right',
-          },
+          // {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   href: 'https://discord.gg/8bAXxPSPdw',
+          //   label: 'Discord',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
@@ -105,22 +110,22 @@ const config = {
                 label: 'Docs',
                 to: '/docs/intro',
               },
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
             ],
           },
           {
             title: 'Connect',
             items: [
               {
-                label: 'Github',
-                href: 'https://github.com/orionphi',
+                label: 'GitHub',
+                href: 'https://github.com/OrionFinanceAI',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/flowfinance',
+                href: 'https://discord.gg/8bAXxPSPdw',
               },
               // {
               //   label: 'X',

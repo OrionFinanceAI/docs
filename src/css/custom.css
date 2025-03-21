@@ -6,6 +6,9 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  --ifm-background-color: #121212 !important;
+  --ifm-footer-background-color: #000000;
+
   --ifm-color-primary: #37a181;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -26,19 +29,19 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #37a181;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary: #4196fd;
+  --ifm-color-primary-dark: #147af6;
+  --ifm-color-primary-darker: #0272fa;
+  --ifm-color-primary-darkest: #0356bb;
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --docusaurus-highlighted-code-line-bg: #100c0c;
-  --ifm-navbar-background-color: #1b1b1d;
+  --ifm-navbar-background-color: #000000;
   --ifm-navbar-link-color: #ffffff;
-  --ifm-navbar-link-hover-color: #f0f0f0;
-  --ifm-footer-background-color: #1b1b1d;
+  --ifm-navbar-link-hover-color: #4196fd;
+  /* --ifm-footer-background-color: #1b1b1d; */
   --ifm-footer-color: #ffffff;
   --ifm-footer-link-color: #ffffff;
-  --ifm-footer-link-hover-color: #f0f0f0;
+  --ifm-footer-link-hover-color: #4196fd;
 }
