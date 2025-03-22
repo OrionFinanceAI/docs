@@ -90,7 +90,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Documentation',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {
@@ -107,8 +107,8 @@ const config = {
             title: 'Discover',
             items: [
               {
-                label: 'Docs',
-                to: '/docs/intro',
+                label: 'Documentation',
+                to: '/docs/introduction/orion',
               },
               // {
               //   label: 'Blog',

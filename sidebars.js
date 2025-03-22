@@ -23,7 +23,7 @@ const sidebars = {
     {
       type: 'html', 
       value: 'Introduction',
-      className: 'menu__category menu__spacer', 
+      className: 'menu__category', 
     },
     'introduction/orion',
     'introduction/design_principles',
@@ -38,7 +38,7 @@ const sidebars = {
     {
       type: 'html', 
       value: 'Protocol Design',
-      className: 'menu__category menu__spacer',
+      className: 'menu__category',
     },
     'protocol_design/overview',
     'protocol_design/tokenomics',
@@ -55,7 +55,7 @@ const sidebars = {
     {
       type: 'html', 
       value: 'Financial Machine Learning',
-      className: 'menu__category menu__spacer',
+      className: 'menu__category',
     },
     'financial_machine_learning/why_ml',
 
@@ -69,7 +69,7 @@ const sidebars = {
     {
       type: 'html', 
       value: 'fhEVM',
-      className: 'menu__category menu__spacer',
+      className: 'menu__category',
     },
     'fhEVM/what_is_fhEVM',
 
