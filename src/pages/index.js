@@ -22,7 +22,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={``}
       description="Description will go into a meta tag in <head />">
       {/* <HomepageHeader /> */}
       <main>
@@ -31,7 +31,7 @@ export default function Home() {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          minHeight: '65vh'
+          minHeight: '69vh'
         }}>
           <img src="/img/tagline_white.png" alt="Orion Finance Logo"/>
         </div>
