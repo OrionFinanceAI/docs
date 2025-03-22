@@ -21,46 +21,68 @@ const sidebars = {
   // But you can create a sidebar manually
   docsSidebar: [
     {
-      type: 'html', // Non-clickable title
+      type: 'html', 
       value: 'Introduction',
-      className: 'menu__category menu__spacer', // Adds padding
+      className: 'menu__category menu__spacer', 
     },
-    'intro', // Clickable doc under Introduction
+    'introduction/orion',
+    'introduction/design_principles',
+
 
     {
-      type: 'html', // Add spacing before the new title
-      value: '&nbsp;', // Empty space
+      type: 'html', 
+      value: '&nbsp;',
       className: 'menu__spacer',
     },
 
     {
-      type: 'html', // New non-clickable title
-      value: 'Advanced Topics',
+      type: 'html', 
+      value: 'Protocol Design',
       className: 'menu__category menu__spacer',
     },
+    'protocol_design/overview',
+    'protocol_design/tokenomics',
+    'protocol_design/batching_netting',
+    'protocol_design/permissionless_vaults',
+
+
     {
-      type: 'category',
-      label: 'Docs Basics',
-      collapsed: true,
-      items: [
-        'docs-basics/congratulations',
-        'docs-basics/create-a-blog-post',
-        'docs-basics/create-a-document',
-        'docs-basics/create-a-page',
-        'docs-basics/deploy-your-site',
-        'docs-basics/markdown-features',
-      ],
+      type: 'html', 
+      value: '&nbsp;',
+      className: 'menu__spacer',
     },
 
     {
-      type: 'category',
-      label: 'Docs Extras',
-      collapsed: true,
-      items: [
-        'docs-extras/manage-docs-versions',
-        'docs-extras/translate-your-site',
-      ],
+      type: 'html', 
+      value: 'Financial Machine Learning',
+      className: 'menu__category menu__spacer',
     },
+    'financial_machine_learning/why_ml',
+
+
+    {
+      type: 'html', 
+      value: '&nbsp;',
+      className: 'menu__spacer',
+    },
+
+    {
+      type: 'html', 
+      value: 'fhEVM',
+      className: 'menu__category menu__spacer',
+    },
+    'fhEVM/what_is_fhEVM',
+
+
+    // {
+    //   type: 'category',
+    //   label: 'Docs Extras',
+    //   collapsed: true,
+    //   items: [
+    //     'docs-extras/manage-docs-versions',
+    //     'docs-extras/translate-your-site',
+    //   ],
+    // },
   ],
 };
 export default sidebars;
