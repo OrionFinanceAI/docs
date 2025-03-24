@@ -1,41 +1,9 @@
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <img src="/img/tagline_white.png" alt="Orion Finance Logo"/>
-      </div>
-    </header>
-  );
-}
+import { useEffect } from "react";
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={``}
-      description="Description will go into a meta tag in <head />">
-      {/* <HomepageHeader /> */}
-      <main>
-        {/* <HomepageFeatures /> */}
-        <div className="container" style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: '69vh'
-        }}>
-          <img src="/img/tagline_white.png" alt="Orion Finance Logo"/>
-        </div>
-      </main>
-    </Layout>
-  );
+  useEffect(() => {
+    window.location.href = "/landing.html";
+  }, []);
+
+  return null;
 }

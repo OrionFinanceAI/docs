@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orion Finance Tearsheets - Financial Documentation">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Orion Finance Tearsheets</title>
+    <style>
+        /* Modern CSS reset and base styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: "Inter", sans-serif;
+            background-color: #fbf8ef;
+        }
+
+        /* Add font styles for headings */
+        h1, h2, h3, h4, h5, h6, .nav-bar a {
+            font-family: "EB Garamond", serif;
+        }
+
+        /* Container for better organization */
+        .container {
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Main content container */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 95vw;
+            height: 80vh;
+            margin: 0 auto;
+        }
+
+        /* Controls container */
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 320px;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        /* Create a wrapper for the selectors */
+        .selector-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Navigation bar styling */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 10px;
+            background-color: #2a5296;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid black;
+            position: relative;
+            min-height: 60px;
+        }
+
+        .nav-bar .logo {
+            height: 40px;
+            width: auto;
+            margin-left: 10px;
+            z-index: 2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0 30px;
+        }
+
+        .nav-bar a {
+            color: #fbf8ef;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-bar a:not(:has(.logo)):hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-bar a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Add this new style */
+        .nav-bar a:focus {
+            outline: none;
+        }
+
+        .nav-bar a:active {
+            background-color: transparent;
+        }
+
+        /* Protocol selector styling */
+        .chain-protocol-selector select {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid #2a5296;
+            background-color: white;
+            color: #2a5296;
+            width: 100%;
+        }
+
+        .chain-protocol-selector select:focus {
+            outline: none;
+            border-color: #1a4286;
+        }
+
+        /* PDF container and controls */
+        .pdf-container {
+            flex: 1;
+            background-color: #fbf8ef;
+            border-radius: 8px;
+            border: 1px solid black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 100%;
+            max-width: 60%; /* Adjust this percentage to reduce width */
+            margin-right: auto; /* Adds whitespace to the right */
+        }
+
+        .download-button {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 8px 16px;
+            background-color: #2a5296;
+            color: #fbf8ef;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            width: 320px;
+        }
+
+        .download-button:hover {
+            background-color: #1a4286;
+        }
+
+        /* Responsive iframe */
+        iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            flex: 1;
+        }
+
+        /* Loading state */
+        .loading {
+            text-align: center;
+            padding: 20px;
+            display: none;
+            color: #2a5296;
+            font-family: "EB Garamond", Times, serif;
+        }
+
+        iframe:not(:loaded) + .loading {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="https://flowfinance.ltd/">
+                <img src="images/FF_lockup_yellow.svg" alt="Flow Finance Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="pitch.html" target="_blank">Pitch Deck</a>
+                <a href="tearsheet.html" class="active">Tearsheets</a>
+                <a href="cv.html">CEO CV</a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="controls">
+                <div class="selector-group">
+                    <div class="chain-protocol-selector">
+                        <select id="chainprotocolSelect" onchange="handleProtocolChange()">
+                            <option value="1/Morpho">Chain: Ethereum | Protocol: Morpho</option>
+                            <option value="1/Beefy">Chain: Ethereum | Protocol: Beefy</option>
+                            <option value="10/Beefy">Chain: Optimism | Protocol: Beefy</option>
+                            <option value="56/Beefy">Chain: BSC | Protocol: Beefy</option>
+                            <option value="8453/Morpho">Chain: Base | Protocol: Morpho</option>
+                            <option value="8453/Beefy">Chain: Base | Protocol: Beefy</option>
+                            <option value="42161/Beefy">Chain: Arbitrum | Protocol: Beefy</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="download-button" onclick="downloadPDF()">Download Tearsheet</button>
+            </div>
+            <div class="pdf-container">
+                <iframe src="files/1/Morpho_Tearsheet.pdf#toolbar=0&view=FitH" title="Flow Finance Tearsheet" id="pdfViewer"></iframe>
+                <div class="loading">Loading PDF...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadPDF() {
+            const iframe = document.getElementById('pdfViewer');
+            const protocol = document.getElementById('chainprotocolSelect').value;
+            let pdfPath;
+            
+            switch(protocol) {
+                case '1/Morpho':
+                    pdfPath = 'files/1/MORPHO_tearsheet.pdf';
+                    break;
+                case '1/Beefy':
+                    pdfPath = 'files/1/BEEFY_tearsheet.pdf';
+                    break;
+                case '10/Beefy':
+                    pdfPath = 'files/10/BEEFY_tearsheet.pdf';
+                    break;
+                case '56/Beefy':
+                    pdfPath = 'files/56/BEEFY_tearsheet.pdf';
+                    break;
+                case '8453/Beefy':
+                    pdfPath = 'files/8453/BEEFY_tearsheet.pdf';
+                    break;
+                case '8453/Morpho':
+                    pdfPath = 'files/8453/MORPHO_tearsheet.pdf';
+                    break;
+                case '42161/Beefy':
+                    pdfPath = 'files/42161/BEEFY_tearsheet.pdf';
+                    break;                    
+            }
+            
+            pdfPath += '#toolbar=0&view=FitH';
+            iframe.src = pdfPath;
+            
+            iframe.onerror = function() {
+                console.error('Error loading PDF');
+                document.querySelector('.loading').textContent = 'Error loading PDF. Please try again later.';
+            };
+        }
+
+        function handleProtocolChange() {
+            loadPDF();
+        }
+        window.onload = function() {
+            loadPDF();
+        }
+
+        function downloadPDF() {
+            const iframe = document.getElementById('pdfViewer');
+            const currentPDF = iframe.src.split('#')[0]; // Remove the toolbar parameters
+            window.open(currentPDF, '_blank');
+        }
+    </script>
+</body>
+</html>

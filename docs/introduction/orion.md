@@ -32,16 +32,12 @@ Vaults are **ERC-4626-compliant** but extend beyond single-asset yield strategie
 ### Powered by fhEVM  
 Orion leverages **fully homomorphic encryption (fhEVM)** to enhance privacy while maintaining transparency.
 
-
 ## Orion's Role in the Ecosystem
 
 Orion is not just another DeFi vault protocol. It’s **infrastructure** — a foundational layer for asset managers, DAOs, and users seeking better onchain portfolio management.
 
 Instead of competing with existing protocols, Orion enhances their efficiency and **makes DeFi asset management scalable**.
 
-
 ## The Road Ahead
 
 Orion will evolve into **fully permissionless infrastructure** that supports **customizable, efficient, and intelligent DeFi portfolio management**.
-
-
