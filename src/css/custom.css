@@ -55,3 +55,8 @@
 .menu__spacer {
   margin-top: 5px;  /* Adds space between sections */
 }
+
+/* Add font styles for headings */
+h1, h2, h3, h4, h5, h6, .nav-bar a {
+font-family: "EB Garamond", serif;
+}
