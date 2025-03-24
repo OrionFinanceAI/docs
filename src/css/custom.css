@@ -8,6 +8,7 @@
 :root {
   --ifm-background-color: #121212 !important;
   --ifm-footer-background-color: #000000;
+  font-family: "Inter", sans-serif;
 
   --ifm-color-primary: #37a181;
   --ifm-color-primary-dark: #29784c;
