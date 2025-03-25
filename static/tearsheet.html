@@ -191,8 +191,8 @@
 <body>
     <div class="container">
         <nav class="nav-bar">
-            <a href="https://flowfinance.ltd/">
-                <img src="images/FF_lockup_yellow.svg" alt="Flow Finance Logo" class="logo">
+            <a href="index.html">
+                <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo">
             </a>
             <div class="nav-links">
                 <a href="pitch.html" target="_blank">Pitch Deck</a>
@@ -207,7 +207,9 @@
                         <select id="chainprotocolSelect" onchange="handleProtocolChange()">
                             <option value="1/Morpho">Chain: Ethereum | Protocol: Morpho</option>
                             <option value="1/Beefy">Chain: Ethereum | Protocol: Beefy</option>
+                            <option value="1/Superform">Chain: Ethereum | Protocol: Superform</option>
                             <option value="10/Beefy">Chain: Optimism | Protocol: Beefy</option>
+                            <option value="10/Superform">Chain: Optimism | Protocol: Superform</option>
                             <option value="56/Beefy">Chain: BSC | Protocol: Beefy</option>
                             <option value="8453/Morpho">Chain: Base | Protocol: Morpho</option>
                             <option value="8453/Beefy">Chain: Base | Protocol: Beefy</option>
@@ -237,8 +239,14 @@
                 case '1/Beefy':
                     pdfPath = 'files/1/BEEFY_tearsheet.pdf';
                     break;
+                case '1/Superform':
+                    pdfPath = 'files/1/SUPERFORM_tearsheet.pdf';
+                    break;
                 case '10/Beefy':
                     pdfPath = 'files/10/BEEFY_tearsheet.pdf';
+                    break;
+                case '10/Superform':
+                    pdfPath = 'files/10/SUPERFORM_tearsheet.pdf';
                     break;
                 case '56/Beefy':
                     pdfPath = 'files/56/BEEFY_tearsheet.pdf';
