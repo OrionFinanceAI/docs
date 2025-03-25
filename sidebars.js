@@ -72,17 +72,6 @@ const sidebars = {
       className: 'menu__category',
     },
     'fhEVM/what_is_fhEVM',
-
-
-    // {
-    //   type: 'category',
-    //   label: 'Docs Extras',
-    //   collapsed: true,
-    //   items: [
-    //     'docs-extras/manage-docs-versions',
-    //     'docs-extras/translate-your-site',
-    //   ],
-    // },
   ],
 };
 export default sidebars;

@@ -71,16 +71,9 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
-          // {
-          //   href: 'https://discord.gg/8bAXxPSPdw',
-          //   label: 'Discord',
-          //   position: 'right',
-          // },
         ],
       },
       footer: {
-        // style: 'dark',
         links: [
           {
             title: 'Discover',
@@ -89,10 +82,21 @@ const config = {
                 label: 'Documentation',
                 to: '/docs/introduction/orion',
               },
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                label: 'Pitch Deck',
+                href: '/pitch.html',
+                target: '_blank',
+              },
+              {
+                label: 'Tearsheets',
+                href: '/tearsheet.html',
+                target: '_blank',
+              },
+              {
+                label: 'CEO CV',
+                href: '/cv.html',
+                target: '_blank',
+              }
             ],
           },
           {
@@ -114,10 +118,6 @@ const config = {
           },
         ],
       },
-      // prism: {
-      //   theme: prismThemes.github,
-      //   darkTheme: prismThemes.dracula,
-      // },
     }),
 };
 

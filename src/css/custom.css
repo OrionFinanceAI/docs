@@ -50,6 +50,7 @@
 .menu__category {
   padding-left: 13px; /* Adjust as needed */
   font-weight: bold;  /* Optional: Make it stand out */
+  font-family: "EB Garamond", serif;
 }
 
 .menu__spacer {
@@ -59,4 +60,15 @@
 /* Add font styles for headings */
 h1, h2, h3, h4, h5, h6, .nav-bar a {
 font-family: "EB Garamond", serif;
+}
+
+/* Style the navbar brand/title */
+.navbar__title {
+  font-family: "EB Garamond", serif;
+  font-weight: 600;
+}
+
+/* Style the navbar links if you want them to have a different font */
+.navbar__item {
+  font-family: "EB Garamond", serif;
 }
