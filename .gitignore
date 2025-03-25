@@ -20,15 +20,21 @@ yarn-debug.log*
 yarn-error.log*
 
 # Static files - Data Pipelines in progress.
-static/files/*
+static/files/1/*
+static/files/10/*
+static/files/56/*
+static/files/137/*
+static/files/8453/*
+static/files/42161/*
+
 !static/files/Matteo_Manzi___CV_compressed.pdf
 # Operational Strategies:
-# !static/files/1/MORPHO_tearsheet.pdf
-# !static/files/1/BEEFY_tearsheet.pdf
-# !static/files/1/SUPERFORM_tearsheet.pdf
-# !static/files/10/BEEFY_tearsheet.pdf
-# !static/files/10/SUPERFORM_tearsheet.pdf
-# !static/files/56/BEEFY_tearsheet.pdf
-# !static/files/8453/MORPHO_tearsheet.pdf
-# !static/files/8453/BEEFY_tearsheet.pdf
-# !static/files/42161/BEEFY_tearsheet.pdf
+!static/files/1/MORPHO_tearsheet.pdf
+!static/files/1/BEEFY_tearsheet.pdf
+!static/files/1/SUPERFORM_tearsheet.pdf
+!static/files/10/BEEFY_tearsheet.pdf
+!static/files/10/SUPERFORM_tearsheet.pdf
+!static/files/56/BEEFY_tearsheet.pdf
+!static/files/8453/MORPHO_tearsheet.pdf
+!static/files/8453/BEEFY_tearsheet.pdf
+!static/files/42161/BEEFY_tearsheet.pdf
