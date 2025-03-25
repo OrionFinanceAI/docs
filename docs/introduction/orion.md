@@ -1,13 +1,10 @@
----
-sidebar_position: 1
----
 # What is Orion? 
 
 Orion Finance is a **permissionless portfolio management protocol** designed to optimize onchain capital efficiency while minimizing costs and duplication of efforts for users. It enables anyone to create, manage, and invest in structured portfolios through **modular, yield-bearing vaults**.
 
 At its core, Orion is building a next-generation permissionless infrastructure that democratizes access to advanced portfolio strategies and lowers the barrier to entry for managers to participate in a marketplace of indices and actively managed DeFi products.
 
-We are building an on-chain [Millennium](https://www.efinancialcareers.it/news/2019/01/what-is-it-like-to-work-for-millennium-management).
+We are building [Millennium](https://www.efinancialcareers.it/news/2019/01/what-is-it-like-to-work-for-millennium-management). On-chain.
 
 ## Why Does Orion Exist?
 
@@ -22,17 +19,18 @@ Orion is not just another DeFi vault protocol. It’s **infrastructure** — a f
 
 ## Key Features
 
-### Financial Machine Learning
+### [Financial Machine Learning](../key_features/financial_machine_learning.md)
 
-[TODO]
+Orion integrates [Financial Machine Learning](https://skfolio.org/) primitives into the protocol, enabling data-driven decision-making for both active and passive strategies. By providing institutional-grade quant infrastructure for on-chain asset management, we lower entry barriers for portfolio managers.
 
-### Confidential EVM Smart Contracts
+### [Confidential EVM Smart Contracts](../key_features/fhEVM.md)
 
-Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy dynamics.
+Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy performance.
 
-### Batching and Netting
+### [Batching and Netting](../key_features/batching_netting.md)
+
 Orion **batches transactions** across multiple vaults to **democratize gas costs**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 
-### Permissionless and Composable Vaults
+### [Permissionless and Composable Vaults](../key_features/vaults.md)
 
 Vaults are [ERC-4626-compliant](https://docs.yearn.fi/getting-started/products/yvaults/v3) and extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.

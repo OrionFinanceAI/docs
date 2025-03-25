@@ -1,7 +1,1 @@
----
-sidebar_position: 8
----
-
-# Confidential EVM Smart Contracts
-
-[TODO]
+# Confidential EVM Smart Contracts [TODO]

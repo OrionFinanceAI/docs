@@ -1,8 +1,4 @@
----
-sidebar_position: 3
----
-
-# Overview
+# Overview [TODO review]
 
 Orion Finance is designed as a modular, permissionless protocol for onchain portfolio management. At its core, it enables the creation and execution of customizable, yield-generating vaults that support multivariate strategies, batch rebalancing, and seamless composability.
 
@@ -24,7 +20,6 @@ Each vault consists of:
 
 This modularity allows asset managers to deploy vaults tailored to specific risk/reward profiles.
 
-
 ## Batching and Netting Layer
 
 Orion introduces a **batching and netting mechanism** that:
@@ -36,7 +31,6 @@ This architecture not only increases **capital efficiency** but also improves **
 
 In the future, this batching layer may enable **peer-to-peer bartering** of assets (when nettable), further minimizing execution friction.
 
-
 ## Permissionless by Default
 
 Anyone can:
@@ -45,7 +39,6 @@ Anyone can:
 - Access performance data
 
 By making vault deployment and strategy execution **permissionless**, Orion unlocks network effects and innovation from a wider ecosystem — from DAOs and quants to protocol-native asset managers.
-
 
 ## Machine Learning-Enabled Strategy Abstraction [TODO: should we provide optimisation and risk management for custom strategies?]
 
@@ -56,7 +49,6 @@ A core differentiator for Orion is its ability to **abstract away financial comp
 
 This abstraction allows everyday users to access intelligent portfolios without needing to manage or understand the strategy mechanics themselves.
 
-
 ## Composability and Integrations [TODO: ??]
 
 Vaults can be used as:
@@ -66,6 +58,11 @@ Vaults can be used as:
 
 This makes Orion an ideal substrate for DeFi-native fund managers, structured product designers, or protocols seeking capital-efficient yield routing.
 
+### On the Relation with Marketplaces [TODO: ??]
+
+Prediction marketplaces: https://olas.network/agent-economies/predict
+
+Data marketplaces: https://oceanprotocol.com/build/data-marketplaces/
 
 ## Foundation for the Future
 
@@ -77,6 +74,3 @@ Its modular and extensible design allows for:
 - Incentive-driven discovery and reputation
 
 Together, these building blocks will form a **robust, standard for onchain portfolio management**.
-
-
-

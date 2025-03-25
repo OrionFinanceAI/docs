@@ -1,20 +1,14 @@
----
-sidebar_position: 2
----
-
-# Design Principles
+# Design Principles [TODO review]
 
 Orion Finance is built on a core belief: permissionless, modular financial infrastructure can enable powerful new forms of collaboration and value creation — while reducing systemic complexity.
 
 This page outlines the key design principles that guide how we build Orion.
-
 
 ## Simplicity Through Modularity
 
 Complexity is the enemy of composability. Our protocol is modular by design, separating concerns across vault logic, strategy execution, and value flow. This modularity allows each piece of the system to evolve independently while remaining easy to reason about.
 
 Rather than building a monolith, Orion enables asset managers, protocols, and individuals to plug into a customizable vault infrastructure — with just the pieces they need.
-
 
 ## Permissionless by Default
 

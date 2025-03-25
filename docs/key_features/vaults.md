@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # Vaults
 
 [TODO: discuss both permissionless and composable aspects.]

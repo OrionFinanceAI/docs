@@ -1,7 +1,6 @@
----
-sidebar_position: 7
----
+# Financial Machine Learning [TODO]
 
-# Financial Machine Learning
+## Active Management
 
-[TODO]
+## Passive Management
+
