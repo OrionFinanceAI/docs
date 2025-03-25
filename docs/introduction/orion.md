@@ -1,45 +1,32 @@
 ---
 sidebar_position: 1
 ---
-# What is Orion Finance? 
+# What is Orion? 
 
 Orion Finance is a **permissionless portfolio management protocol** designed to optimize onchain capital efficiency while minimizing costs and duplication of efforts for users. It enables anyone to create, manage, and invest in structured portfolios through **modular, yield-bearing vaults**.
 
-At its core, Orion is building a next-generation permissionless infrastructure that democratizes access to advanced portfolio strategies and lowers the barrier to entry for managers.
+At its core, Orion is building a next-generation permissionless infrastructure that democratizes access to advanced portfolio strategies and lowers the barrier to entry for managers to participate in a marketplace of indices and actively managed DeFi products.
+
+We are building an on-chain [Millennium](https://www.efinancialcareers.it/news/2019/01/what-is-it-like-to-work-for-millennium-management).
 
 ## Why Does Orion Exist?
 
-DeFi is powerful, but fragmented and riddled with inefficiencies. Traditional vaults are **gas-intensive, inefficient, and lack composability**.
+DeFi is powerful, yet fragmented and riddled with inefficiencies. Traditional vaults are **gas-intensive** and the barrier to entry for new managers is steep, requiring expertise in both DeFi and Asset Management.
 
-Orion aims to **bridge this gap** by providing structured infrastructure that allows for:
-- **Modularity** – Vaults can be customized for different risk/reward profiles.  
-- **Efficiency** – Gas batching and peer-to-peer netting reduce costs.  
-- **Permissionlessness** – Anyone can create and manage portfolios, without gatekeepers.  
-
-
-## Key Features
-
-### Batching & Gas Netting  
-Orion **batches transactions** across multiple users to **democratize gas costs**. In some cases, **peer-to-peer bartering** can further optimize execution, minimizing unnecessary gas fees.
-
-### Composable Vaults (ERC-4626+)  
-Vaults are **ERC-4626-compliant** but extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.
-
-### Powered by fhEVM  
-Orion leverages **fully homomorphic encryption (fhEVM)** to enhance privacy while maintaining transparency.
-
-## Orion's Role in the Ecosystem
+Orion aims to **bridge this gap** by providing an on-chain and off-chain infrastructure that allows for:
+- **Efficiency** – Transactions batching and peer-to-peer netting to reduce costs.  
+- **Permissionlessness** – Anyone can create and manage portfolios, without gatekeepers.
+- **Customization** – Vaults can be tailored with different risk/reward profiles.
 
 Orion is not just another DeFi vault protocol. It’s **infrastructure** — a foundational layer for asset managers, DAOs, and users seeking better onchain portfolio management.
 
-Instead of competing with existing protocols, Orion enhances their efficiency and **makes DeFi asset management scalable**.
+## Key Features
 
-## The Road Ahead
+### Batching & Netting  
+Orion **batches transactions** across multiple vaults to **democratize gas costs**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 
-Orion will evolve into **fully permissionless infrastructure** that supports **customizable, efficient, and intelligent DeFi portfolio management**.
+### Composable Vaults (ERC-4626)  
+Vaults are [ERC-4626-compliant](https://docs.yearn.fi/getting-started/products/yvaults/v3) and extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.
 
-<br/>
-<br/>
-<br/>
-
-![Orion Finance Tagline](/img/tagline_white.png)
+### Powered by fhEVM  
+Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy dynamics.
