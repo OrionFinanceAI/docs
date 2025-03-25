@@ -25,7 +25,7 @@ Each vault consists of:
 This modularity allows asset managers to deploy vaults tailored to specific risk/reward profiles.
 
 
-## Batching & Netting Layer
+## Batching and Netting Layer
 
 Orion introduces a **batching and netting mechanism** that:
 - Aggregates rebalancing actions across vaults

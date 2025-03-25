@@ -11,22 +11,28 @@ We are building an on-chain [Millennium](https://www.efinancialcareers.it/news/2
 
 ## Why Does Orion Exist?
 
-DeFi is powerful, yet fragmented and riddled with inefficiencies. Traditional vaults are **gas-intensive** and the barrier to entry for new managers is steep, requiring expertise in both DeFi and Asset Management.
+DeFi is powerful, yet fragmented and riddled with inefficiencies. Traditional vaults are gas-intensive and the barrier to entry for new managers is steep, requiring expertise in both DeFi and Asset Management.
 
 Orion aims to **bridge this gap** by providing an on-chain and off-chain infrastructure that allows for:
-- **Efficiency** – Transactions batching and peer-to-peer netting to reduce costs.  
+- **Efficiency** – [Transactions batching](https://morpho.mirror.xyz/iq_YeOw05eUeWgxZf1CYxWvU5aQO_tCPQFtlsv8ogeo) and [peer-to-peer netting](https://www.investopedia.com/terms/n/netting.asp) to reduce costs.  
 - **Permissionlessness** – Anyone can create and manage portfolios, without gatekeepers.
 - **Customization** – Vaults can be tailored with different risk/reward profiles.
 
-Orion is not just another DeFi vault protocol. It’s **infrastructure** — a foundational layer for asset managers, DAOs, and users seeking better onchain portfolio management.
+Orion is not just another DeFi vault protocol. It’s **infrastructure** — a foundational layer for asset managers, treasury managers, and users seeking better onchain portfolio management.
 
 ## Key Features
 
-### Batching & Netting  
+### Financial Machine Learning
+
+[TODO]
+
+### Confidential EVM Smart Contracts
+
+Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy dynamics.
+
+### Batching and Netting
 Orion **batches transactions** across multiple vaults to **democratize gas costs**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 
-### Composable Vaults (ERC-4626)  
-Vaults are [ERC-4626-compliant](https://docs.yearn.fi/getting-started/products/yvaults/v3) and extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.
+### Permissionless and Composable Vaults
 
-### Powered by fhEVM  
-Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy dynamics.
+Vaults are [ERC-4626-compliant](https://docs.yearn.fi/getting-started/products/yvaults/v3) and extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.
