@@ -29,7 +29,7 @@ Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/
 
 ### [Batching and Netting](../key_features/batching_netting.md)
 
-Orion **batches transactions** across multiple vaults to **democratize gas costs**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
+Orion **batches transactions** across multiple vaults to **democratize gas fees**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 
 ### [Permissionless and Composable Vaults](../key_features/vaults.md)
 
