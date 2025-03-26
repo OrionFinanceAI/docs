@@ -36,6 +36,4 @@ Orion isn’t a black box — it’s infrastructure others can build on.
 
 We prioritize clean APIs, visibility into vault performance, and extensibility across vault types and strategy logic. Whether you’re a DAO, an asset manager, or a DeFi builder, Orion is designed to support your workflows.
 
----
-
 These principles help us build something lasting — infrastructure that supports a permissionless, collaborative future of onchain asset management.
