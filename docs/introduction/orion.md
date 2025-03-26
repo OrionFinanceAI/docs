@@ -27,7 +27,7 @@ Orion integrates [Financial Machine Learning](https://skfolio.org/) primitives i
 
 Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy performance.
 
-### [Batching and Netting](../key_features/batching_netting.md)
+### [Batching and Netting](../protocol_design/tokenomics#batching-and-netting.md)
 
 Orion **batches transactions** across multiple vaults to **democratize gas fees**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 

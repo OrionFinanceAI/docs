@@ -30,7 +30,7 @@ To ensure aligned incentives, protocol participation and profitabilty, **ORION a
 
 This system encourages **market-driven fee competition** — where managers can experiment with strategies and pricing models while the protocol benefits from all vaults activity.
 
-## [Batching and Netting](../key_features/batching_netting.md)
+## Batching and Netting
 
 Orion introduces **batching and netting layers** to reduce gas costs by combining and offsetting transactions between users, when possible. This feature plays a key role in the protocol’s fee dynamics:
 

@@ -56,7 +56,6 @@ const sidebars = {
     },
     'key_features/financial_machine_learning',
     'key_features/fhEVM',
-    'key_features/batching_netting',
     'key_features/vaults',
   ],
 };

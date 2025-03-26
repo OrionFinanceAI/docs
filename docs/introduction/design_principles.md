@@ -15,7 +15,10 @@ Rather than building a monolith, Orion enables asset managers, protocols, and in
 Anyone shall be able to make use of Orion's infrastructure to:
 - Launch a vault;
 - Deploy a strategy and build a track record;
+- Access performance data;
 - Provide or manage capital.
+
+By making vault deployment and strategy execution **permissionless**, Orion unlocks network effects and innovation from a wider ecosystem — from DAOs and quants to protocol-native asset managers.
 
 ## Transparency
 
