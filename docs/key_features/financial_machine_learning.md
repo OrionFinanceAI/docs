@@ -22,21 +22,26 @@ We envision a system where:
 - Orion integrates APIs from [skfolio](https://skfolio.org/) to define **quantitative finance metrics** (e.g., covariance, tail risk, train-test split) that **inform onchain vault behavior.**
 - Index logic is encoded onchain via **IPFS CIDs** pointing to [dockerized](https://www.docker.com/) portfolio management logic, ensuring **deterministic and verifiable index construction.**
 
-**Example**
-```python
-from skfolio import RiskMeasure
-from skfolio.optimization import MeanRisk, ObjectiveFunction
 
-X = get_universe_returns()
-model = MeanRisk(
-    risk_measure=RiskMeasure.STANDARD_DEVIATION,
-    objective_function=ObjectiveFunction.MAXIMIZE_RATIO,
-    portfolio_params=dict(name="Max Sharpe"),
-)
 
-model.fit(X)
-model.weights_
-```
+<details>
+  <summary>Example of a ruleset</summary>
+
+  ```python
+   from skfolio import RiskMeasure
+   from skfolio.optimization import MeanRisk, ObjectiveFunction
+
+   X = get_universe_returns()
+   model = MeanRisk(
+      risk_measure=RiskMeasure.STANDARD_DEVIATION,
+      objective_function=ObjectiveFunction.MAXIMIZE_RATIO,
+      portfolio_params=dict(name="Max Sharpe"),
+   )
+
+   model.fit(X)
+   model.weights_
+   ```
+</details>
 
 This enables a whole new layer of user-defined indexes, based on advanced financial machine learning rulesets.
 
