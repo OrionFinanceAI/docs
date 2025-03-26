@@ -1,6 +1,6 @@
 # Overview
 
-Orion Finance is designed as a modular, permissionless protocol for onchain portfolio management. At its core, it enables the creation and execution of customizable, yield-generating vaults that support multivariate strategies, batch rebalancing, and seamless composability.
+Orion Finance is designed as a modular, permissionless protocol for onchain portfolio management. At its core, it enables the creation and execution of customizable, yield-generating vaults that support multivariate strategies, batch rebalancing, netting, and seamless composability.
 
 ## Modular Vault Architecture
 
@@ -17,37 +17,27 @@ Each vault consists of:
 
 This modularity allows asset managers to deploy vaults tailored to specific risk/reward profiles.
 
-## Machine Learning-Enabled Strategy Abstraction [TODO: should we provide optimisation and risk management for custom strategies?]
+## Machine Learning-Enabled Strategy Abstraction
 
-A core differentiator for Orion is its ability to **abstract away financial complexity** using machine learning, allowing vault creators to:
-- Optimize allocation across multiple assets
-- Minimize drawdowns
-- Adapt dynamically to market regimes
+A core differentiator for Orion is its ability to **abstract away complexity** using financial machine learning, allowing vault managers to:
+- Optimize allocation across multiple assets;
+- Minimize drawdowns;
+- Adapt dynamically to market regimes;
+- Provide optimization and risk management for custom strategies.
 
 This abstraction allows everyday users to access intelligent portfolios without needing to manage or understand the strategy mechanics themselves.
 
 ## Composability and Integrations
 
 Vaults can be used as:
-- Inputs to other vaults (recursive portfolios);
-- Collateral in lending protocols;
-- Building blocks in structured products.
+- Inputs to other vaults and building blocks in more structured products: DeFi fund of funds;
+- Collateral in lending protocols.
 
 This makes Orion an ideal substrate for DeFi-native fund managers, structured product designers, or protocols seeking capital-efficient yield routing.
 
-### On the Relation with Marketplaces [TODO: ??]
+### On the Relation with Marketplaces
 
-Prediction marketplaces: https://olas.network/agent-economies/predict
+Orion integrates with existing prediction and data marketplaces to enhance strategy development and market intelligence. Some potential integrations include:
 
-Data marketplaces: https://oceanprotocol.com/build/data-marketplaces/
-
-## Foundation for the Future
-
-While Orion aims to become the **infrastructure layer** for permissionless portfolio creation.
-
-Its modular and extensible design allows for:
-- Ecosystem vault templates
-- Permissionless strategy marketplaces
-- Incentive-driven discovery and reputation
-
-Together, these building blocks will form a **robust, standard for onchain portfolio management**.
+- [Prediction marketplaces](https://olas.network/agent-economies/predict) can inform vault strategies by incorporating predictive models and agent-based forecasts;
+- [Data marketplaces](https://oceanprotocol.com/build/data-marketplaces/) enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
