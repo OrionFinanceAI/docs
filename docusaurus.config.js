@@ -79,10 +79,6 @@ const config = {
             title: 'Discover',
             items: [
               {
-                label: 'Documentation',
-                to: '/docs/introduction/orion',
-              },
-              {
                 label: 'Pitch Deck',
                 href: '/pitch.html',
                 target: '_blank',
@@ -90,6 +86,11 @@ const config = {
               {
                 label: 'Tearsheets',
                 href: '/tearsheet.html',
+                target: '_blank',
+              },
+              {
+                label: 'Tech Stack',
+                href: '/tech.html',
                 target: '_blank',
               },
               {
