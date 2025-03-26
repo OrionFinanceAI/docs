@@ -2,7 +2,7 @@
 
 Orion Finance is a **permissionless portfolio management protocol** designed to optimize onchain capital efficiency while minimizing costs and duplication of efforts for users. It enables anyone to create, manage, and invest in structured portfolios through **modular, yield-bearing vaults**.
 
-At its core, Orion is building a next-generation permissionless infrastructure that democratizes access to advanced portfolio strategies and lowers the barrier to entry for managers to participate in a marketplace of indices and actively managed DeFi products.
+At its core, Orion is building a next-generation permissionless infrastructure that democratizes access to advanced portfolio strategies and lowers the barrier to entry for managers to participate in a marketplace of indexes and actively managed DeFi products.
 
 We are building [Millennium](https://www.efinancialcareers.it/news/2019/01/what-is-it-like-to-work-for-millennium-management). On-chain.
 

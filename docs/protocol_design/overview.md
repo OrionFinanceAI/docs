@@ -39,5 +39,10 @@ This makes Orion an ideal substrate for DeFi-native fund managers, structured pr
 
 Orion integrates with existing prediction and data marketplaces to enhance strategy development and market intelligence. Some potential integrations include:
 
-- [Prediction marketplaces](https://olas.network/agent-economies/predict) can inform vault strategies by incorporating predictive models and agent-based forecasts;
-- [Data marketplaces](https://oceanprotocol.com/build/data-marketplaces/) enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
+- Prediction marketplaces[^1][^2] can inform vault strategies by incorporating predictive models and agent-based forecasts;
+
+- Data marketplaces[^3] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
+
+[^1]: https://olas.network/agent-economies/predict
+[^2]: https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8
+[^3]: https://oceanprotocol.com/build/data-marketplaces/

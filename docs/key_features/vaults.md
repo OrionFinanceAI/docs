@@ -25,8 +25,6 @@ This model:
 | **Transparency**      | Limited (offchain reporting) | Fully onchain and verifiable |
 | **Execution Costs**   | High fees and centralized costs | Gas-efficient batching and automation |
 
----
-
 ## How Permissionless Vaults Work
 
 Orion vaults follow the **ERC-4626 standard**, making them **interoperable, composable, and extendable**.
