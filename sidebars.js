@@ -42,9 +42,6 @@ const sidebars = {
     },
     'protocol_design/overview',
     'protocol_design/tokenomics',
-    'protocol_design/batching_netting',
-    'protocol_design/permissionless_vaults',
-
 
     {
       type: 'html', 
@@ -54,35 +51,12 @@ const sidebars = {
 
     {
       type: 'html', 
-      value: 'Financial Machine Learning',
+      value: 'Key Features',
       className: 'menu__category',
     },
-    'financial_machine_learning/why_ml',
-
-
-    {
-      type: 'html', 
-      value: '&nbsp;',
-      className: 'menu__spacer',
-    },
-
-    {
-      type: 'html', 
-      value: 'fhEVM',
-      className: 'menu__category',
-    },
-    'fhEVM/what_is_fhEVM',
-
-
-    // {
-    //   type: 'category',
-    //   label: 'Docs Extras',
-    //   collapsed: true,
-    //   items: [
-    //     'docs-extras/manage-docs-versions',
-    //     'docs-extras/translate-your-site',
-    //   ],
-    // },
+    'key_features/financial_machine_learning',
+    'key_features/fhEVM',
+    'key_features/vaults',
   ],
 };
 export default sidebars;
