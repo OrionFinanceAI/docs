@@ -27,6 +27,8 @@ A core differentiator for Orion is its ability to **abstract away complexity** u
 
 This abstraction allows everyday users to access intelligent portfolios without needing to manage or understand the strategy mechanics themselves.
 
+![Agent](../../static/img/agent.jpg)
+
 ## Composability and Integrations
 
 Vaults can be used as:
