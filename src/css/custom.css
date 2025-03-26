@@ -72,3 +72,16 @@ font-family: "EB Garamond", serif;
 .navbar__item {
   font-family: "EB Garamond", serif;
 }
+
+/* Custom background for code blocks */
+.codeBlockLines_e6Vv {
+  background-color: #2a2424;
+}
+
+/* Custom color for keywords */
+.token.keyword {
+  color: #3a94de;
+  font-weight: normal;
+  font-style: normal !important;
+}
+
