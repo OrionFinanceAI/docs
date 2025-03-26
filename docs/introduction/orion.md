@@ -31,6 +31,6 @@ Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/
 
 Orion **batches transactions** across multiple vaults to **democratize gas fees**. **Peer-to-peer bartering** further optimizes execution, minimizing unnecessary gas fees.
 
-### [Permissionless and Composable Vaults](../key_features/vaults.md)
+### [Permissionless Vaults](../key_features/vaults.md)
 
 Vaults are [ERC-4626-compliant](https://docs.yearn.fi/getting-started/products/yvaults/v3) and extend beyond single-asset yield strategies, supporting **multi-asset rebalancing** with automated execution.
