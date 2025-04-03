@@ -1,6 +1,6 @@
 # Overview
 
-Orion Finance is designed as a modular, permissionless protocol for onchain portfolio management. At its core, it enables the creation and execution of customizable, yield-generating vaults that support multivariate strategies, batch rebalancing, netting, and seamless composability.
+Orion Finance is designed as a modular, permissionless protocol for onchain portfolio management. At its core, it enables the creation and execution of customizable, yield-generating vaults that support multivariate strategies and seamless composability.
 
 ## Modular Vault Architecture
 
@@ -45,6 +45,6 @@ Orion integrates with existing prediction and data marketplaces to enhance strat
 
 - Data marketplaces[^3] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
 
-[^1]: https://olas.network/agent-economies/predict
-[^2]: https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8
-[^3]: https://oceanprotocol.com/build/data-marketplaces/
+[^1]: [Olas Predict](https://olas.network/agent-economies/predict)
+[^2]: [31 Use Cases for the Allora Network](https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8)
+[^3]: [Ocean Protocol - Data Marketplaces](https://oceanprotocol.com/build/data-marketplaces/)

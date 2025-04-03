@@ -23,7 +23,7 @@ This model:
 |------------------------|----------------------------|-----------------------------|
 | **Access**            | Restricted (only approved managers) | Open to anyone |
 | **Transparency**      | Limited (offchain reporting) | Fully onchain and verifiable |
-| **Execution Costs**   | High fees and centralized costs | Gas-efficient batching and automation |
+| **Execution Costs**   | High fees and centralized costs | Gas-efficient orchestration and automation |
 
 ## How Permissionless Vaults Work
 
