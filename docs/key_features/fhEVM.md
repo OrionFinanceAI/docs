@@ -2,7 +2,7 @@
 
 ## What is fhEVM?
 
-[fhEVM](https://docs.zama.ai/fhevm) is an innovative technology that integrates **Fully Homomorphic Encryption (FHE)** into the **Ethereum Virtual Machine (EVM)**. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments.
+fhEVM[^1][^2] is an innovative technology that integrates **Fully Homomorphic Encryption (FHE)** into the **Ethereum Virtual Machine (EVM)**. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments.
 
 
 ## How fhEVM Works
@@ -45,3 +45,6 @@ With fhEVM, Orion can:
 - Allow users to deposit into vaults without revealing balances or allocations.
 
 This brings institutional-grade **confidentiality** in a fully **permissionless** and DeFi-native environment.
+
+[^1]: [Zama - Welcome to fhEVM](https://docs.zama.ai/fhevm)
+[^2]: [INCO - Confidential ERC20 Framework](https://www.inco.org/#research)

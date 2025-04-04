@@ -30,11 +30,11 @@ To ensure aligned incentives, protocol participation and profitabilty, **ORION a
 
 This system encourages **market-driven fee competition** — where managers can experiment with strategies and pricing models while the protocol benefits from all vaults activity.
 
-## Batching and Netting
+## Bundling, Batching and Netting
 
-Orion introduces **batching and netting layers** to reduce gas costs by combining and offsetting transactions between users, when possible. This feature plays a key role in the protocol’s fee dynamics:
+Orion introduces **bundling, batching and netting layers** to reduce gas costs by combining and offsetting transactions between users, when possible. This feature plays a key role in the protocol’s fee dynamics:
 
-- When transactions are batched and/or netted **within Orion**, users pay **only a fraction** of the typical gas fees.
+- When transactions are processed **within Orion**, users pay **only a fraction** of the typical gas fees.
 - A part of the saved cost is redirected to the **Orion protocol treasury**, accruing value in the token.
 
 This creates a strong incentive to use Orion-native infrastructure for capital efficiency and cost savings — while benefiting the protocol.
@@ -45,5 +45,6 @@ This creates a strong incentive to use Orion-native infrastructure for capital e
 |-------------------------------|------------------------------------------------|-----------------------------|
 | Third-Party Vault Fees        | Fraction of third-party fee models             | Indirect protocol revenue   |
 | Native Vault Fees             | Performance/management fees                    | Direct allocation           |
-| Netting                       | Shared gas savings from peer-to-peer bartering | Protocol receives portion   |
-| Batching Layer                | Shared gas savings from execution bundling     | Protocol receives portion   |
+| Bundling Layer                | Shared gas savings from transaction bundling   | Protocol receives portion   |
+| Batching Layer                | Shared gas savings from execution batching     | Protocol receives portion   |
+| Netting Layer                 | Shared gas savings from peer-to-peer bartering | Protocol receives portion   |
