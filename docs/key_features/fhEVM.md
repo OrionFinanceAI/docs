@@ -2,7 +2,7 @@
 
 ## What is fhEVM?
 
-fhEVM[^1][^2] is an innovative technology that integrates **Fully Homomorphic Encryption (FHE)** into the **Ethereum Virtual Machine (EVM)**. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments.
+fhEVM[^1] [^2] is an innovative technology that integrates **Fully Homomorphic Encryption (FHE)** into the **Ethereum Virtual Machine (EVM)**. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments.
 
 
 ## How fhEVM Works

@@ -27,7 +27,7 @@ A core differentiator for Orion is its ability to **abstract away complexity** u
 
 This abstraction allows everyday users to access intelligent portfolios without needing to manage or understand the strategy mechanics themselves.
 
-![Agent](../../static/img/agent.jpg)
+![heatmap](../../static/img/heatmap.png)
 
 ## Composability and Integrations
 
@@ -41,10 +41,11 @@ This makes Orion an ideal substrate for DeFi-native fund managers, structured pr
 
 Orion integrates with existing prediction and data marketplaces to enhance strategy development and market intelligence. Some potential integrations include:
 
-- Prediction marketplaces[^1][^2] can inform vault strategies by incorporating predictive models and agent-based forecasts;
+- Prediction marketplaces[^1] [^2] can inform vault strategies by incorporating predictive models and agent-based forecasts;
 
-- Data marketplaces[^3] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
+- Data marketplaces[^3] [^4] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
 
 [^1]: [Olas Predict](https://olas.network/agent-economies/predict)
 [^2]: [31 Use Cases for the Allora Network](https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8)
 [^3]: [Ocean Protocol - Data Marketplaces](https://oceanprotocol.com/build/data-marketplaces/)
+[^4]: [Cambrian](https://www.cambrian.org/)

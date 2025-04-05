@@ -17,7 +17,7 @@ This dual system lets vaults range from **hands-off, rules-based strategies** to
 
 Orion enables a permissionless marketplace for **onchain indexes** — passive portfolios based on predefined rulesets, rebalanced automatically, and tokenized as ERC-20s.
 
-We envision a system where:
+We are building a system where:
 - Users define index weights based on asset classes, themes, or rulesets;
 - Orion integrates APIs from [skfolio](https://skfolio.org/) to define **quantitative finance metrics** (e.g., covariance, tail risk, train-test split) that **inform onchain vault behavior.**
 - Index logic is encoded onchain via **IPFS CIDs** pointing to [dockerized](https://www.docker.com/) portfolio management logic, ensuring **deterministic and verifiable index construction.**
@@ -43,7 +43,10 @@ We envision a system where:
    ```
 </details>
 
-This enables a whole new layer of user-defined indexes, based on advanced financial machine learning rulesets.
+This enables a whole new layer of user-defined and trustless indexes, based on advanced and computationally intensive financial machine learning rulesets.
+
+![Cards](../../static/img/Cards.png)
+
 
 ### Trust Guarantees
 
@@ -66,4 +69,6 @@ These models are either:
 - **Hardcoded into the vault strategy**, based on parameterized ML outputs, or
 - **Queried dynamically** via oracles or offchain computation layers (e.g., zkML, verifiable compute).
 
-Orion abstracts this complexity for users while allowing vault managers to go deeper — tuning model parameters, overriding logic, or composing hybrid strategies.
+Orion abstracts this complexity for users, providing data, sdks and toolings, while allowing vault managers to go deeper — tuning model parameters, overriding logic, or composing hybrid strategies.
+
+![Agent](../../static/img/agent.jpg)
