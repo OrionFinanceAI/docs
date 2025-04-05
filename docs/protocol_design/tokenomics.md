@@ -39,6 +39,8 @@ Orion introduces **bundling, batching and netting layers** to reduce gas costs b
 
 This creates a strong incentive to use Orion-native infrastructure for capital efficiency and cost savings — while benefiting the protocol.
 
+![Tokenomics](../../static/img/tokenomics.png)
+
 ## Summary - Value Accrual in the ORION Token
 
 | Source                        | Mechanism                                      | Value to ORION Token        |
