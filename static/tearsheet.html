@@ -207,22 +207,16 @@
                 <div class="selector-group">
                     <div class="chain-protocol-selector">
                         <select id="chainprotocolSelect" onchange="handleProtocolChange()">
-                            <option value="1/Morpho">Chain: Ethereum | Protocol: Morpho</option>
-                            <option value="1/Beefy">Chain: Ethereum | Protocol: Beefy</option>
-                            <option value="1/Superform">Chain: Ethereum | Protocol: Superform</option>
-                            <option value="10/Beefy">Chain: Optimism | Protocol: Beefy</option>
-                            <option value="10/Superform">Chain: Optimism | Protocol: Superform</option>
-                            <option value="56/Beefy">Chain: BSC | Protocol: Beefy</option>
-                            <option value="8453/Morpho">Chain: Base | Protocol: Morpho</option>
-                            <option value="8453/Beefy">Chain: Base | Protocol: Beefy</option>
-                            <option value="42161/Beefy">Chain: Arbitrum | Protocol: Beefy</option>
+                            <option value="1">Ethereum</option>
+                            <option value="8453">Base</option>
+                            <option value="42161">Arbitrum</option>
                         </select>
                     </div>
                 </div>
                 <button class="download-button" onclick="downloadPDF()">Download Tearsheet</button>
             </div>
             <div class="pdf-container">
-                <iframe src="files/1/Morpho_Tearsheet.pdf#toolbar=0&view=FitH" title="Flow Finance Tearsheet" id="pdfViewer"></iframe>
+                <iframe src="files/backtest/1_tearsheet.pdf#toolbar=0&view=FitH" title="Orion Finance Tearsheet" id="pdfViewer"></iframe>
                 <div class="loading">Loading PDF...</div>
             </div>
         </div>
@@ -235,32 +229,14 @@
             let pdfPath;
             
             switch(protocol) {
-                case '1/Morpho':
-                    pdfPath = 'files/1/MORPHO_tearsheet.pdf';
+                case '1':
+                    pdfPath = 'files/backtest/1_tearsheet.pdf';
                     break;
-                case '1/Beefy':
-                    pdfPath = 'files/1/BEEFY_tearsheet.pdf';
+                case '8453':
+                    pdfPath = 'files/backtest/8453_tearsheet.pdf';
                     break;
-                case '1/Superform':
-                    pdfPath = 'files/1/SUPERFORM_tearsheet.pdf';
-                    break;
-                case '10/Beefy':
-                    pdfPath = 'files/10/BEEFY_tearsheet.pdf';
-                    break;
-                case '10/Superform':
-                    pdfPath = 'files/10/SUPERFORM_tearsheet.pdf';
-                    break;
-                case '56/Beefy':
-                    pdfPath = 'files/56/BEEFY_tearsheet.pdf';
-                    break;
-                case '8453/Beefy':
-                    pdfPath = 'files/8453/BEEFY_tearsheet.pdf';
-                    break;
-                case '8453/Morpho':
-                    pdfPath = 'files/8453/MORPHO_tearsheet.pdf';
-                    break;
-                case '42161/Beefy':
-                    pdfPath = 'files/42161/BEEFY_tearsheet.pdf';
+                case '42161':
+                    pdfPath = 'files/backtest/42161_tearsheet.pdf';
                     break;                    
             }
             
