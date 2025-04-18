@@ -1,210 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tech Stack">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <title>Orion Finance Tech Stack</title>
-    <style>
-        /* Modern CSS reset and base styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tech Stack" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <title>Orion Finance Tech Stack</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        html, body {
-            height: 100%;
-            font-family: "Inter", sans-serif;
-            background-color: #fbf8ef;
-        }
+    html, body {
+      height: 100%;
+      font-family: "Inter", sans-serif;
+      background-color: #fbf8ef;
+    }
 
-        /* Add font styles for headings */
-        h1, h2, h3, h4, h5, h6, .nav-bar a {
-            font-family: "EB Garamond", serif;
-        }
+    h1, h2, h3, h4, h5, h6, .nav-bar a {
+      font-family: "EB Garamond", serif;
+    }
 
-        /* Container for better organization */
-        .container {
-            height: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
-        /* Navigation bar styling */
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            padding: 10px;
-            background-color: #2a5296;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 1px solid black;
-            position: relative;
-            min-height: 60px;
-        }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 10px;
+      background-color: #2a5296;
+      border-radius: 8px;
+      border: 1px solid black;
+      min-height: 60px;
+    }
 
-        .nav-bar .logo {
-            height: 40px;
-            width: auto;
-            margin-left: 10px;
-            z-index: 2;
-        }
+    .nav-bar .logo {
+      height: 40px;
+      width: auto;
+      margin-left: 10px;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            justify-content: flex-end;
-            margin: 0;
-            padding: 0 30px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      padding: 0 30px;
+    }
 
-        .nav-bar a {
-            color: #fbf8ef;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 5px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
+    .nav-bar a {
+      color: #fbf8ef;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 5px 15px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
 
-        .nav-bar a:not(:has(.logo)):hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+    .nav-bar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-        .nav-bar a.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+    .nav-bar a.active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
-        /* Add this new style */
-        .nav-bar a:focus {
-            outline: none;
-        }
+    .svg-viewer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: auto;
+    }
 
-        .nav-bar a:active {
-            background-color: transparent;
-        }
+    .svg-title {
+      font-size: 1.5rem;
+      font-family: "EB Garamond", serif;
+      margin: 20px 0;
+    }
 
-        /* PDF viewer container */
-        .pdf-container {
-            flex: 1;
-            width: 50vw;
-            margin: 0 auto;  /* Center horizontally */
-            background-color: #fbf8ef;
-            border-radius: 8px;
-            border: 1px solid black;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
+    .svg-frame {
+    flex: 1;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
-        /* Responsive iframe */
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
+    .svg-frame img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    }
 
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            display: none;
-            color: #2a5296;
-            font-family: "EB Garamond", Times, serif;
-        }
 
-        iframe:not(:loaded) + .loading {
-            display: block;
-        }
 
-        /* Authentication overlay */
-        .auth-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fbf8ef;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
 
-        .auth-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 2px solid #2a5296;
-            text-align: center;
-        }
+    .controls button {
+      padding: 8px 16px;
+      font-size: 1rem;
+      background-color: #2a5296;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-        .auth-container input {
-            margin: 1rem 0;
-            padding: 0.5rem;
-            width: 200px;
-            border: 1px solid #2a5296;
-            border-radius: 4px;
-        }
-
-        .auth-container button {
-            background-color: #2a5296;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .auth-container button:hover {
-            background-color: #1a4286;
-        }
-
-    </style>
+    .controls button:hover {
+      background-color: #1a4286;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html">
-                <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo">
-            </a>
-            <div class="nav-links">
-                <a href="/docs/introduction/orion">Documentation</a>
-                <a href="pitch.html" target="_blank">Pitch Deck</a>
-                <a href="tearsheet.html">Tearsheets</a>
-                <a href="tech.html" class="active">Tech Stack</a>
-                <a href="cv.html">CEO CV</a>
-            </div>
-        </nav>
-        <div class="pdf-container">
-            <iframe src="files/Tech_Stack_compressed.pdf#toolbar=1&navpanes=0&scrollbar=0&view=FitH" title="Orion Finance Tech Stack" id="pdfViewer"></iframe>
-            <div class="loading">Loading PDF...</div>
-        </div>
-    </div>
+  <div class="container">
+    <nav class="nav-bar">
+      <a href="index.html">
+        <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo" />
+      </a>
+      <div class="nav-links">
+        <a href="/docs/introduction/orion">Documentation</a>
+        <a href="pitch.html" target="_blank">Pitch Deck</a>
+        <a href="tearsheet.html">Tearsheets</a>
+        <a href="tech.html" class="active">Tech Stack</a>
+        <a href="cv.html">CEO CV</a>
+      </div>
+    </nav>
 
-    <script>
-        function loadPDF() {
-            const iframe = document.getElementById('pdfViewer');
-            const pdfPath = 'files/Tech_Stack_compressed.pdf#toolbar=0&view=FitV';
-            
-            iframe.src = pdfPath;
-            
-            iframe.onerror = function() {
-                console.error('Error loading PDF');
-                document.querySelector('.loading').textContent = 'Error loading PDF. Please try again later.';
-            };
-        }
-        
-        window.onload = function() {
-            loadPDF();
-        }
-    </script>
+    <div class="svg-viewer">
+      <div class="svg-title" id="svgTitle">Loading...</div>
+      <div class="controls">
+        <button onclick="previousSVG()">Previous</button>
+        <button onclick="nextSVG()">Next</button>
+      </div>
+      <div class="svg-frame">
+        <img id="svgImage" src="" alt="SVG Diagram" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const svgFiles = [
+      { file: "tech/dp.svg", title: "Data Pipeline" },
+      { file: "tech/pm.svg", title: "Portfolio Manager" },
+      { file: "tech/ff.svg", title: "FlowFolio" },
+      { file: "tech/qa.svg", title: "Quant Analysis" },
+      { file: "tech/utils.svg", title: "Utils" },
+    ];
+
+    let currentIndex = 0;
+
+    function loadSVG(index) {
+      const { file, title } = svgFiles[index];
+      document.getElementById("svgImage").src = file;
+      document.getElementById("svgTitle").textContent = title;
+    }
+
+    function previousSVG() {
+      currentIndex = (currentIndex - 1 + svgFiles.length) % svgFiles.length;
+      loadSVG(currentIndex);
+    }
+
+    function nextSVG() {
+      currentIndex = (currentIndex + 1) % svgFiles.length;
+      loadSVG(currentIndex);
+    }
+
+    window.onload = () => {
+      loadSVG(currentIndex);
+    };
+  </script>
 </body>
 </html>
