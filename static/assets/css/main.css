@@ -2995,3 +2995,21 @@ input, select, textarea {
     background: linear-gradient(to right, transparent, #fbf8ef, transparent);
 	margin: 40px auto;
 }
+
+#top-right-links {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+}
+
+#top-right-links a {
+    display: inline-block;
+}
+
+.top-right-logo {
+    width: 40px;
+    height: auto;
+}
