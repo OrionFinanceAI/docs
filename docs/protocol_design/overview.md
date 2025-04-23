@@ -32,8 +32,13 @@ This abstraction allows everyday users to access intelligent portfolios without 
 ## Composability and Integrations
 
 Vaults can be used as:
-- Inputs to other vaults and building blocks in more structured products: DeFi fund of funds;
-- Collateral in lending protocols.
+- **DeFi fund of funds**: Orion vaults will be used as building blocks of more structured products.
+
+- **Lending and borrowing**: Orion will connect with leading lending protocols, enabling users to use LP shares as collateral.
+
+- **Liquidity provisioning**: Orion incentivizes users to provide liquidity to Automatic Market Making pools.
+
+- **Principal and Yield (PT/YT) token**: given their yield-bearing nature, Orion vaults will be integrated into yield-trading protocols[^1].
 
 This makes Orion an ideal substrate for DeFi-native fund managers, structured product designers, or protocols seeking capital-efficient yield routing.
 
@@ -41,11 +46,12 @@ This makes Orion an ideal substrate for DeFi-native fund managers, structured pr
 
 Orion integrates with existing prediction and data marketplaces to enhance strategy development and market intelligence. Some potential integrations include:
 
-- Prediction marketplaces[^1] [^2] can inform vault strategies by incorporating predictive models and agent-based forecasts;
+- Prediction marketplaces[^2] [^3] can inform vault strategies by incorporating predictive models and agent-based forecasts;
 
-- Data marketplaces[^3] [^4] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
+- Data marketplaces[^4] [^5] enable vaults to leverage external data feeds for better-informed allocations and real-time market adaptation.
 
-[^1]: [Olas Predict](https://olas.network/agent-economies/predict)
-[^2]: [31 Use Cases for the Allora Network](https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8)
-[^3]: [Ocean Protocol - Data Marketplaces](https://oceanprotocol.com/build/data-marketplaces/)
-[^4]: [Cambrian](https://www.cambrian.org/)
+[^1]: [Yield Tokenization](https://docs.pendle.finance/ProtocolMechanics/YieldTokenization/SY)
+[^2]: [Olas Predict](https://olas.network/agent-economies/predict)
+[^3]: [31 Use Cases for the Allora Network](https://medium.com/allora-network/31-use-cases-for-the-allora-network-69034608b1e8)
+[^4]: [Ocean Protocol - Data Marketplaces](https://oceanprotocol.com/build/data-marketplaces/)
+[^5]: [Cambrian](https://www.cambrian.org/)
