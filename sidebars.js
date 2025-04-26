@@ -57,6 +57,29 @@ const sidebars = {
     'key_features/financial_machine_learning',
     'key_features/fhEVM',
     'key_features/vaults',
+
+    {
+      type: 'html', 
+      value: '&nbsp;',
+      className: 'menu__spacer',
+    },
+
+    {
+      type: 'html', 
+      value: 'Resources',
+      className: 'menu__category',
+    },
+    {
+      type: 'link',
+      label: 'Brand Guidelines',
+      href: 'https://drive.google.com/file/d/11ZBEPbCWu87db5-krTzVyaDUwuyskfW4/view',
+    },
+    {
+      type: 'link',
+      label: 'GitHub',
+      href: 'https://github.com/OrionFinanceAI',
+    },
+    
   ],
 };
 export default sidebars;
