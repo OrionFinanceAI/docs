@@ -55,7 +55,7 @@ const sidebars = {
       className: 'menu__category',
     },
     'key_features/financial_machine_learning',
-    'key_features/fhEVM',
+    'key_features/privacy',
     'key_features/vaults',
 
     {
