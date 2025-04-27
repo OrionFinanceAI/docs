@@ -6,20 +6,20 @@ DeFi today is *transparent by default* — which is [powerful, but often limitin
 
 In particular, **vault curation** of public, blockchain-based DeFi products is one of the most promising business models for the next generation of finance. However, its scalability and long-term sustainability are limited by a fundamental issue: the need for portfolio managers to protect their alpha.
 
-In today's DeFi environment, **vault tokenization standards** expose real-time portfolio compositions and trading behaviors: **copycats and freeloaders** can easily monitor, reverse-engineer, and replicate strategies without bearing the associated research and execution costs.
+In today's DeFi environment, **vault tokenization standards** expose real-time portfolio compositions and trading behaviors. **Copycats and freeloaders** can easily monitor, reverse-engineer, and replicate strategies without bearing the associated research and execution costs.
 
 Without privacy, managers interested in avoiding liquidity fragmentation are forced into an impossible trade-off between:
-- Sharing all their moves and risk losing their edge,
+- Sharing all their moves and risking the loss of their edge, or
 - Operating off-chain, undermining the auditability and composability of DeFi.
 
-If DeFi is to scale professional asset management, **confidentiality must become a first-class primitive** — just like composability, security, and permissionlessness already are.
+If DeFi is to scale professional asset management, **confidentiality must become a first-class primitive** — just as composability, security, and permissionlessness already are.
 
 ## Our Commitment to Onchain Privacy
 
 Through innovations like **confidential smart contracts**, Orion enables:
 - **Protection of proprietary strategies** without sacrificing onchain composability;
 - **Private portfolio management** with verifiable, encrypted performance;
-- **Auditability for users and LPs** without revealing sensitive manager behavior: vault strategies remain private where holdings and trades are encrypted, yet performance remains auditable.
+- **Auditability for users and LPs** without exposing sensitive manager behavior: vault strategies remain private, with holdings and trades encrypted, while performance remains auditable.
 - **MEV protection**, safeguarding trade execution against frontrunning and sandwich attacks;
 - **Users to deposit into vaults** without revealing their positions or allocations.
 
