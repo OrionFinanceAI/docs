@@ -4,7 +4,6 @@ Orion Finance is **fully permissionless**, meaning anyone can create, manage, an
 
 This open design ensures that **portfolio management is decentralized and composable**, enabling broader innovation and capital efficiency in DeFi.
 
-
 ## Why Permissionless Matters
 
 Traditional asset management platforms allow only approved teams and entities to deploy investment strategies and build auditable, out-of-sample track records. This:
