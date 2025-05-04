@@ -22,7 +22,7 @@ yarn-error.log*
 # Static files - Data Pipelines in progress.
 static/files/backtest/*
 !static/files/backtest/1_tearsheet.pdf
-!static/files/backtest/137_tearsheet.pdf
+!static/files/backtest/10_tearsheet.pdf
 !static/files/backtest/146_tearsheet.pdf
 !static/files/backtest/8453_tearsheet.pdf
 !static/files/backtest/42161_tearsheet.pdf
