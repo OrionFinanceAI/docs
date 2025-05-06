@@ -23,9 +23,9 @@ Orion is not just another DeFi vault protocol. It’s **infrastructure** — a f
 
 Orion defines and integrates [Financial Machine Learning](https://skfolio.org/) primitives into the protocol, enabling data-driven decision-making for both active and passive strategies. By providing institutional-grade quant infrastructure for on-chain asset management, we lower entry barriers for portfolio managers.
 
-### [Confidential EVM Smart Contracts](../key_features/fhEVM.md)
+### [Confidential EVM Smart Contracts](../key_features/privacy.md)
 
-Orion leverages [fully homomorphic encryption (fhEVM)](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending) to enhance privacy of on-chain track records while maintaining transparency over the tokenized strategy performance.
+Orion integrates advancements in cryptography (e.g. [fhEVM](https://www.zama.ai/post/onboard-the-next-trillions-in-defi-with-confidential-lending)) to power private vault strategies and encrypted performance tracking; protecting manager alpha and user privacy, while maintaining verifiable onchain outcomes.
 
 ### [Bundling, Batching and Netting](../protocol_design/tokenomics#bundling-batching-and-netting.md)
 

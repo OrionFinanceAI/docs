@@ -112,10 +112,6 @@ const config = {
             title: 'Connect',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/OrionFinanceAI',
-              },
-              {
                 label: 'Discord',
                 href: 'https://discord.gg/8bAXxPSPdw',
               },
