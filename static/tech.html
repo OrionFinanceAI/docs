@@ -24,9 +24,11 @@
     }
 
     .container {
+      height: 100%;
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      gap: 20px;
     }
 
     .nav-bar {
@@ -36,7 +38,9 @@
       padding: 10px;
       background-color: #2a5296;
       border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       border: 1px solid black;
+      position: relative;
       min-height: 60px;
     }
 
@@ -44,12 +48,15 @@
       height: 40px;
       width: auto;
       margin-left: 10px;
+      z-index: 2;
     }
 
     .nav-links {
       display: flex;
       gap: 30px;
       align-items: center;
+      justify-content: flex-end;
+      margin: 0;
       padding: 0 30px;
     }
 
@@ -62,12 +69,69 @@
       transition: background-color 0.3s;
     }
 
-    .nav-bar a:hover {
+    .nav-bar a:not(:has(.logo)):hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
 
     .nav-bar a.active {
       background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-bar a:focus {
+      outline: none;
+    }
+
+    .nav-bar a:active {
+      background-color: transparent;
+    }
+
+    /* Mobile Responsive Styles */
+    @media screen and (max-width: 1024px) {
+      .container {
+        padding: 4vw 2vw;
+        gap: 12px;
+      }
+      .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 2vw;
+        gap: 6px;
+        min-height: unset;
+        border-radius: 14px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        position: relative;
+      }
+      .nav-bar .logo {
+        height: 28px;
+        margin: 0 auto 4px auto;
+        display: block;
+      }
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        width: 100%;
+        align-items: center;
+        position: static;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        animation: none;
+      }
+      .nav-bar a {
+        font-size: 1.05rem;
+        width: 100%;
+        text-align: center;
+        padding: 7px 0;
+        margin: 0;
+      }
+      .svg-viewer {
+        padding: 0 10px;
+      }
+      .svg-frame {
+        padding: 0 10px;
+      }
     }
 
     .svg-viewer {
