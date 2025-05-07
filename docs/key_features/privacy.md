@@ -14,7 +14,7 @@ Without privacy, managers interested in avoiding liquidity fragmentation are for
 
 If DeFi is to scale professional asset management, **confidentiality must become a first-class primitive** — just as composability, security, and permissionlessness already are.
 
-## Our Commitment to Onchain Privacy
+### Our Commitment to Onchain Privacy
 
 Through innovations like **confidential smart contracts**, Orion enables:
 - **Protection of proprietary strategies** without sacrificing onchain composability;
@@ -25,24 +25,79 @@ Through innovations like **confidential smart contracts**, Orion enables:
 
 By integrating confidential computing natively into our architecture, Orion brings **institutional-grade privacy** to the **permissionless world of DeFi** — unlocking a new era of scalable, professionalized, and competitive onchain asset management.
 
-## Confidential Smart Contracts: A Key Enabler
+### Confidential Smart Contracts: A Key Enabler
 
-Orion integrates advancements in cryptography to power private vault strategies and encrypted performance tracking. One of the most promising technologies in this space is **fhEVM**.
+Orion integrates advancements in cryptography[^1] [^2] to power private vault strategies and encrypted performance tracking. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments. 
 
-### What is fhEVM?
+Transaction inputs and on-chain states are encrypted, ensuring that sensitive information remains confidential, while **fully onchain**, **non-custodial** and **verifiable** by anyone.
 
-fhEVM[^1] [^2] is an innovative technology that integrates **Fully Homomorphic Encryption (FHE)** into the **Ethereum Virtual Machine (EVM)**. This integration enables the execution of confidential smart contracts on encrypted data — ensuring both **data privacy** and **composability** within blockchain environments.
+![Architecture](../../static/img/architecture.png)
 
-1. **Data Encryption**  
-    Transaction inputs and on-chain states are encrypted, ensuring that sensitive information remains confidential, even from validators.
+## Technical Overview
 
-2. **Encrypted Computation**  
-    Smart contracts operate directly on encrypted data using FHE, allowing computations without decryption. This preserves data privacy while enabling complex operations.
+Let:
+- $N$ be the number of active privacy-preserving portfolios.
+- $M$ be the number of distinct assets (tokens) active in the netted portfolio.
+- $a_{i,j}$ denote the (encrypted) amount of asset $j$ held by portfolio $i$, where $i \in \{1, \dots, N\}$ and $j \in \{1, \dots, M\}$.
 
-3. **Decentralized Decryption**  
-    Access to decrypted data is managed on-chain through programmable privacy settings. The decryption process is decentralized via a **threshold multiparty computation (MPC) protocol**, enhancing security and trustlessness.
+Each portfolio $i$ is defined as a vector:
 
-All of this runs **fully onchain**, remaining **non-custodial** and **verifiable** by anyone.
+$$
+a_i = [a_{i,1}, \dots, a_{i,M}] \quad\forall \medspace i \in \{1, \dots, N\}
+$$
+
+where entries are encrypted amounts associated with a whitelisted investment universe shared by every portfolio (i.e., the union of unique symbols across all portfolios).
+
+Let:
+- $A_j$ denote the total (observable) amount of asset $j$ across all portfolios.
+
+$$
+A_j = \sum_{i=1}^{N} \text{Decrypt}(a_{i,j}) \quad \forall \medspace j \in \{1, \dots, M\}
+$$
+
+These totals $A_j$ are used to compute the single, batched portfolio finally executed on-chain.
+
+Note that we can decrypt the sum, not sum decrypted entries, using homomorphic encryption, to further minimize trust:
+
+$$
+A_j = \text{Decrypt} \left( \sum_{i=1}^{N} a_{i,j}\right) \quad \forall \medspace j \in \{1, \dots, M\}
+$$
+
+Let:
+- $R_j$ be the plaintext price of asset $j$ as returned by an on-chain oracle.
+
+The Profit and Loss of each portfolio $i$ is computed as the inner product of its holdings with the public assets return:
+
+$$
+P\&L_i = \sum_{j=1}^{M} \text{Decrypt}(a_{i,j}) \cdot R_j
+$$
+
+As above, using FHE:
+
+$$
+P\&L_i = \text{Decrypt}\left( \sum_{j=1}^{M} a_{i,j} \cdot R_j \right)
+$$
+
+### Proof
+
+For an outside observer, the number of unknowns is $N \cdot M$ (portfolio states).
+
+The number of equations is $M + N$ (one for each asset and one for each portfolio):
+
+$$
+\begin{cases}
+\sum_{i=1}^{N} \text{Decrypt}(a_{i,j}) = A_j \quad \forall \medspace j \in \{1, \dots, M\} \\
+\sum_{j=1}^{M} \text{Decrypt}(a_{i,j}) \cdot R_j = P\&L_i \quad \forall \medspace i \in \{1, \dots, N\}
+\end{cases}
+$$
+
+Thus, the system is underdetermined and has infinitely many solutions if and only if:
+
+$$
+N \cdot M > M + N
+$$
+
+Which is easily satisfied for $N, M \geq 2$.
 
 ---
 

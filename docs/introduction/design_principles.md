@@ -4,12 +4,6 @@ Orion Finance is built on a core belief: permissionless, modular financial infra
 
 This page outlines the key design principles that guide how we are building Orion.
 
-## Modularity
-
-Complexity is the enemy of composability. Our protocol is modular by design, separating concerns across vault logic, strategy execution, and value flow. This modularity allows each piece of the system to evolve independently while remaining easy to reason about.
-
-Rather than building a monolith, Orion enables asset managers, protocols, and individuals to plug into a customizable vault infrastructure — with just the pieces they need.
-
 ## Permissionless
 
 Anyone shall be able to make use of Orion's infrastructure to:
@@ -20,7 +14,7 @@ Anyone shall be able to make use of Orion's infrastructure to:
 
 By making vault deployment and strategy execution **permissionless**, Orion unlocks network effects and innovation from a wider ecosystem — from DAOs and quants to protocol-native asset managers.
 
-## Privacy
+## Privacy and Auditability
 
 Vault curation and professional strategy deployment are critical to DeFi’s future - but they’re unsustainable without confidentiality.
 
@@ -32,20 +26,13 @@ Orion integrates confidential smart contracts using advanced cryptography (e.g.,
 
 In doing so, Orion brings **institutional-grade privacy** into a permissionless, trustless, and composable DeFi environment - empowering scalable and competitive onchain asset management.
 
-## Transparency
+At the same time, Orion is built on-chain from the ground up. Vault logic, incentives, and reporting are all verifiable and transparent. This transparency is essential for trust, composability, and long-term resilience.
 
-Orion is built on-chain from the ground up. Vault logic, incentives, and reporting are all verifiable and transparent - not offchain or hidden behind APIs.
+## Modularity
 
-This transparency is essential for trust, composability, and long-term resilience.
+Orion is modular by design — separating vault logic, strategy execution, and value flow — so each part can evolve independently. This composable architecture lets asset managers, protocols, and individuals plug in only what they need.
+ With clean APIs, transparent performance, and extensible logic, Orion isn’t a black box — it’s collaborative infrastructure built for a permissionless, onchain future.
 
 ## Abstracting Complexity
 
 Our goal is to **abstract** financial complexity, not hide it. The protocol shall serve both skilled quants and casual depositors - with different layers of abstraction.
-
-## Built for Collaboration
-
-Orion isn’t a black box - it’s infrastructure others can build on.
-
-We prioritize clean APIs, visibility into vault performance, and extensibility across vault types and strategy logic. Whether you’re a DAO, an asset manager, or a DeFi builder, Orion is designed to support your workflows.
-
-These principles help us build something lasting - infrastructure that supports a permissionless, collaborative future of onchain asset management.
