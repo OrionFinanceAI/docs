@@ -31,7 +31,7 @@ export default function Home() {
           playsInline
           preload="auto"
         >
-          <source src="/img/video_bg_4.mp4" type="video/mp4" />
+          <source src="/img/video_bg_5.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <nav className={styles.navbar}>

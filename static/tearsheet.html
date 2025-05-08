@@ -41,6 +41,17 @@
             z-index: 1;
         }
 
+        .bg-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.593); /* adjust opacity as needed */
+            z-index: 0;
+            pointer-events: none;
+            border-radius: 8px;
+        }
+
         /* Main content container */
         .main-content {
             display: flex;
@@ -69,59 +80,40 @@
         }
 
         /* Navigation bar styling */
-        .nav-bar {
+        .navbar {
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            gap: 30px;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            position: relative;
-            min-height: 60px;
-        }
-
-        .nav-bar .logo {
-            height: 40px;
-            width: auto;
-            margin-left: 10px;
-            z-index: 2;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
             align-items: center;
-            justify-content: flex-end;
+            padding: 2.5rem 4vw 1.5rem 4vw;
+            background: transparent;
+            position: relative;
+            z-index: 1;
+        }
+        .logoNav {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            height: 2.5rem;
+            margin-right: 1.1rem;
+        }
+        .navLinks {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
             margin: 0;
-            padding: 0 30px;
+            padding: 0;
         }
-
-        .nav-bar a {
-            color: #ffffff;
+        .navLinks li a {
+            color: #fff;
+            font-size: 1.15rem;
             text-decoration: none;
-            font-size: 1rem;
-            font-family: "Inter", sans-serif;
-            padding: 5px 15px;
-            border-radius: 4px;
-            transition: opacity 0.3s;
+            font-weight: 400;
+            transition: color 0.2s;
         }
-
-        .nav-bar a:not(:has(.logo)):hover {
+        .navLinks li a:hover, .navLinks li a.active {
             color: #457ddd;
-        }
-
-        .nav-bar a.active {
-            color: #457ddd;
-        }
-
-        .nav-bar a:focus {
-            outline: none;
-        }
-
-        .nav-bar a:active {
-            background-color: transparent;
         }
 
         /* Protocol selector styling */
@@ -198,17 +190,18 @@
 </head>
 <body>
     <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html">
+        <div class="bg-overlay"></div>
+        <nav class="navbar">
+            <div class="logoNav">
                 <img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo">
-            </a>
-            <div class="nav-links">
-                <a href="/docs/introduction/orion">Documentation</a>
-                <a href="pitch.html" target="_blank">Pitch Deck</a>
-                <a href="tearsheet.html" class="active">Tearsheets</a>
-                <a href="tech.html">Tech Stack</a>
-                <a href="cv.html">CEO CV</a>
             </div>
+            <ul class="navLinks">
+                <li><a href="/docs/introduction/orion">Docs</a></li>
+                <li><a href="pitch.html">Pitch Deck</a></li>
+                <li><a href="tearsheet.html" class="active">Tearsheets</a></li>
+                <li><a href="tech.html">Tech Stack</a></li>
+                <li><a href="cv.html">CEO CV</a></li>
+            </ul>
         </nav>
         <div class="main-content">
             <div class="controls">
