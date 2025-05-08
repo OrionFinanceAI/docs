@@ -122,19 +122,19 @@ const config = {
               }
             ],
           },
-          {
-            title: 'Connect',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/8bAXxPSPdw',
-              },
-              // {
-              //   label: 'X',
-              //   href: 'https://x.com/docusaurus',
-              // },
-            ],
-          },
+          // {
+          //   title: 'Connect',
+          //   items: [
+          //     // {
+          //     //   label: 'Discord',
+          //     //   href: 'https://discord.gg/8bAXxPSPdw',
+          //     // },
+          //     // {
+          //     //   label: 'X',
+          //     //   href: 'https://x.com/docusaurus',
+          //     // },
+          //   ],
+          // },
         ],
       },
     }),

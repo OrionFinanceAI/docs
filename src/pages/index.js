@@ -30,6 +30,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
+          style={{ backgroundImage: 'url(/img/background_7.png)' }}
         >
           <source src="/img/video_bg_5.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -40,7 +41,6 @@ export default function Home() {
           </div>
           <ul className={styles.navLinks}>
             <li><a href="/docs/introduction/orion">Docs</a></li>
-            <li><a href="https://discord.gg/8bAXxPSPdw">Discord</a></li>
             <li><a href="pitch.html">Pitch Deck</a></li>
             <li><a href="tearsheet.html">Tearsheets</a></li>
             <li><a href="tech.html">Tech Stack</a></li>
@@ -69,7 +69,6 @@ export default function Home() {
           </button>
           <ul>
             <li><a href="/docs/introduction/orion" onClick={() => setIsMenuOpen(false)}>Docs</a></li>
-            <li><a href="https://discord.gg/8bAXxPSPdw" onClick={() => setIsMenuOpen(false)}>Discord</a></li>
             <li><a href="pitch.html" onClick={() => setIsMenuOpen(false)}>Pitch Deck</a></li>
             <li><a href="tearsheet.html" onClick={() => setIsMenuOpen(false)}>Tearsheets</a></li>
             <li><a href="tech.html" onClick={() => setIsMenuOpen(false)}>Tech Stack</a></li>
