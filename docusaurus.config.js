@@ -67,10 +67,10 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Orion Finance',
+        title: '',
         logo: {
           alt: 'Orion Finance Logo',
-          src: 'img/logo.png',
+          src: 'img/OF_lockup_white.png',
         },
         items: [
           {
