@@ -23,6 +23,17 @@ export default function Home() {
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
       </Head>
       <div className={styles.landingBg}>
+        <video
+          className={styles.videoBg}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          <source src="/img/video_bg_4.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <nav className={styles.navbar}>
           <div className={styles.logoNav}>
             <img src="/img/OF_lockup_white.png" alt="Orion Finance Logo" className={styles.logo} />

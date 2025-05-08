@@ -17,11 +17,16 @@
         html, body {
             height: 100%;
             font-family: "Inter", sans-serif;
-            background-color: #fbf8ef;
+            background-color: #000;
+            color: #fff;
+            background-image: url('img/background_1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* Add font styles for headings */
-        h1, h2, h3, h4, h5, h6, .nav-bar a {
+        h1, h2, h3, h4, h5, h6 {
             font-family: "EB Garamond", serif;
         }
 
@@ -32,6 +37,8 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Navigation bar styling */
@@ -40,10 +47,10 @@
             justify-content: space-between;
             gap: 30px;
             padding: 10px;
-            background-color: #2a5296;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 1px solid black;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             position: relative;
             min-height: 60px;
         }
@@ -65,23 +72,23 @@
         }
 
         .nav-bar a {
-            color: #fbf8ef;
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            font-family: "Inter", sans-serif;
             padding: 5px 15px;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: opacity 0.3s;
         }
 
         .nav-bar a:not(:has(.logo)):hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+        color: #457ddd;
+    }
 
         .nav-bar a.active {
-            background-color: rgba(255, 255, 255, 0.2);
+            color: #457ddd;
         }
 
-        /* Add this new style */
         .nav-bar a:focus {
             outline: none;
         }
@@ -94,11 +101,12 @@
         .pdf-container {
             flex: 1;
             width: 50vw;
-            margin: 0 auto;  /* Center horizontally */
-            background-color: #fbf8ef;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
             border-radius: 8px;
-            border: 1px solid black;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
 
@@ -115,65 +123,20 @@
             text-align: center;
             padding: 20px;
             display: none;
-            color: #2a5296;
+            color: #fff;
             font-family: "EB Garamond", Times, serif;
         }
 
         iframe:not(:loaded) + .loading {
             display: block;
         }
-
-        /* Authentication overlay */
-        .auth-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fbf8ef;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .auth-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 2px solid #2a5296;
-            text-align: center;
-        }
-
-        .auth-container input {
-            margin: 1rem 0;
-            padding: 0.5rem;
-            width: 200px;
-            border: 1px solid #2a5296;
-            border-radius: 4px;
-        }
-
-        .auth-container button {
-            background-color: #2a5296;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .auth-container button:hover {
-            background-color: #1a4286;
-        }
-
     </style>
 </head>
 <body>
     <div class="container">
         <nav class="nav-bar">
             <a href="index.html">
-                <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo">
+                <img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo">
             </a>
             <div class="nav-links">
                 <a href="/docs/introduction/orion">Documentation</a>

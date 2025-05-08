@@ -16,10 +16,15 @@
     html, body {
       height: 100%;
       font-family: "Inter", sans-serif;
-      background-color: #fbf8ef;
+      background-color: #000;
+      color: #fff;
+      background-image: url('img/background_1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    h1, h2, h3, h4, h5, h6, .nav-bar a {
+    h1, h2, h3, h4, h5, h6 {
       font-family: "EB Garamond", serif;
     }
 
@@ -27,6 +32,8 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      position: relative;
+      z-index: 1;
     }
 
     .nav-bar {
@@ -34,9 +41,11 @@
       justify-content: space-between;
       gap: 30px;
       padding: 10px;
-      background-color: #2a5296;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
       border-radius: 8px;
-      border: 1px solid black;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      position: relative;
       min-height: 60px;
     }
 
@@ -44,30 +53,42 @@
       height: 40px;
       width: auto;
       margin-left: 10px;
+      z-index: 2;
     }
 
     .nav-links {
       display: flex;
       gap: 30px;
       align-items: center;
+      justify-content: flex-end;
+      margin: 0;
       padding: 0 30px;
     }
 
     .nav-bar a {
-      color: #fbf8ef;
+      color: #fff;
       text-decoration: none;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-family: "Inter", sans-serif;
       padding: 5px 15px;
       border-radius: 4px;
-      transition: background-color 0.3s;
+      transition: opacity 0.3s;
     }
 
-    .nav-bar a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+    .nav-bar a:not(:has(.logo)):hover {
+        color: #457ddd;
     }
 
     .nav-bar a.active {
-      background-color: rgba(255, 255, 255, 0.2);
+        color: #457ddd;
+    }
+
+    .nav-bar a:focus {
+        outline: none;
+    }
+
+    .nav-bar a:active {
+        background-color: transparent;
     }
 
     .svg-viewer {
@@ -77,28 +98,35 @@
       align-items: center;
       justify-content: flex-start;
       overflow: auto;
+      padding: 20px;
     }
 
     .svg-title {
       font-size: 1.5rem;
       font-family: "EB Garamond", serif;
       margin: 20px 0;
+      color: #fff;
     }
 
     .svg-frame {
-    flex: 1;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      flex: 1;
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .svg-frame img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     .controls {
@@ -110,15 +138,16 @@
     .controls button {
       padding: 8px 16px;
       font-size: 1rem;
-      background-color: #2a5296;
+      background-color: rgba(255, 255, 255, 0.1);
       color: white;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 4px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     .controls button:hover {
-      background-color: #1a4286;
+      background-color: rgba(255, 255, 255, 0.2);
     }
   </style>
 </head>
@@ -126,7 +155,7 @@
   <div class="container">
     <nav class="nav-bar">
       <a href="index.html">
-        <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo" />
+        <img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" />
       </a>
       <div class="nav-links">
         <a href="/docs/introduction/orion">Documentation</a>
