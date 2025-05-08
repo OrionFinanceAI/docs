@@ -5,207 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Tech Stack" />
   <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  <link rel="stylesheet" href="css/style.css">
   <title>Orion Finance Tech Stack</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: "Inter", sans-serif;
-      background-color: #fbf8ef;
-    }
-
-    h1, h2, h3, h4, h5, h6, .nav-bar a {
-      font-family: "EB Garamond", serif;
-    }
-
-    .container {
-      height: 100%;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      padding: 10px;
-      background-color: #2a5296;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border: 1px solid black;
-      position: relative;
-      min-height: 60px;
-    }
-
-    .nav-bar .logo {
-      height: 40px;
-      width: auto;
-      margin-left: 10px;
-      z-index: 2;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      justify-content: flex-end;
-      margin: 0;
-      padding: 0 30px;
-    }
-
-    .nav-bar a {
-      color: #fbf8ef;
-      text-decoration: none;
-      font-size: 1.2rem;
-      padding: 5px 15px;
-      border-radius: 4px;
-      transition: background-color 0.3s;
-    }
-
-    .nav-bar a:not(:has(.logo)):hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-bar a.active {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .nav-bar a:focus {
-      outline: none;
-    }
-
-    .nav-bar a:active {
-      background-color: transparent;
-    }
-
-    /* Mobile Responsive Styles */
-    @media screen and (max-width: 1024px) {
-      .container {
-        padding: 4vw 2vw;
-        gap: 12px;
-      }
-      .nav-bar {
-        flex-direction: column;
-        align-items: center;
-        padding: 8px 2vw;
-        gap: 6px;
-        min-height: unset;
-        border-radius: 14px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        position: relative;
-      }
-      .nav-bar .logo {
-        height: 28px;
-        margin: 0 auto 4px auto;
-        display: block;
-      }
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
-        width: 100%;
-        align-items: center;
-        position: static;
-        background: none;
-        box-shadow: none;
-        border-radius: 0;
-        animation: none;
-      }
-      .nav-bar a {
-        font-size: 1.05rem;
-        width: 100%;
-        text-align: center;
-        padding: 7px 0;
-        margin: 0;
-      }
-      .svg-viewer {
-        padding: 0 10px;
-      }
-      .svg-frame {
-        padding: 0 10px;
-      }
-    }
-
-    .svg-viewer {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      overflow: auto;
-    }
-
-    .svg-title {
-      font-size: 1.5rem;
-      font-family: "EB Garamond", serif;
-      margin: 20px 0;
-    }
-
-    .svg-frame {
-    flex: 1;
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .svg-frame img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
-    }
-
-    .controls {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .controls button {
-      padding: 8px 16px;
-      font-size: 1rem;
-      background-color: #2a5296;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    .controls button:hover {
-      background-color: #1a4286;
-    }
-  </style>
 </head>
 <body>
+  <div class="bg-overlay"></div>
   <div class="container">
-    <nav class="nav-bar">
-      <a href="index.html">
-        <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo" />
-      </a>
-      <div class="nav-links">
-        <a href="/docs/introduction/orion">Documentation</a>
-        <a href="pitch.html" target="_blank">Pitch Deck</a>
-        <a href="tearsheet.html">Tearsheets</a>
-        <a href="tech.html" class="active">Tech Stack</a>
-        <a href="cv.html">CEO CV</a>
+    <nav class="navbar">
+      <div class="logoNav">
+        <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
       </div>
+      <ul class="navLinks">
+        <li><a href="/docs/introduction/orion">Docs</a></li>
+        <!--    <li><a href="https://discord.gg/8bAXxPSPdw">Discord</a></li>-->
+        <li><a href="pitch.html">Pitch Deck</a></li>
+        <li><a href="tearsheet.html">Tearsheets</a></li>
+        <li><a href="tech.html" class="active">Tech Stack</a></li>
+        <li><a href="cv.html">CEO CV</a></li>
+      </ul>
     </nav>
 
     <div class="svg-viewer">
       <div class="svg-title" id="svgTitle">Loading...</div>
       <div class="controls">
-        <button onclick="previousSVG()">Previous</button>
-        <button onclick="nextSVG()">Next</button>
+        <button class="centered-button" onclick="previousSVG()">Previous</button>
+        <button class="centered-button" onclick="nextSVG()">Next</button>
       </div>
       <div class="svg-frame">
         <img id="svgImage" src="" alt="SVG Diagram" />

@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://orionfinanceai.github.io',
+  url: 'https://orionfinance.ai',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -45,12 +45,20 @@ const config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
+        blog: false,
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '/',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
+
+  // Add static directory configuration
+  staticDirectories: ['static', 'public'],
 
   stylesheets: [
     {
@@ -73,10 +81,10 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Orion Finance',
+        title: '',
         logo: {
           alt: 'Orion Finance Logo',
-          src: 'img/logo.png',
+          src: 'img/OF_lockup_white.png',
         },
         items: [
           {
@@ -114,19 +122,19 @@ const config = {
               }
             ],
           },
-          {
-            title: 'Connect',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/8bAXxPSPdw',
-              },
-              // {
-              //   label: 'X',
-              //   href: 'https://x.com/docusaurus',
-              // },
-            ],
-          },
+          // {
+          //   title: 'Connect',
+          //   items: [
+          //     // {
+          //     //   label: 'Discord',
+          //     //   href: 'https://discord.gg/8bAXxPSPdw',
+          //     // },
+          //     // {
+          //     //   label: 'X',
+          //     //   href: 'https://x.com/docusaurus',
+          //     // },
+          //   ],
+          // },
         ],
       },
     }),

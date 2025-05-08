@@ -85,3 +85,47 @@ font-family: "EB Garamond", serif;
   font-style: normal !important;
 }
 
+/* --- Navbar alignment fix --- */
+.navbar__inner {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure the logo image is vertically centered and sized */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  height: 32px; /* Reduce logo height */
+  padding: 0;
+  margin: 0;
+}
+.navbar__logo img {
+  height: 32px; /* Match the container */
+  width: auto;
+  display: block;
+  margin: 0 8px 0px 0px; /* Add right margin for spacing */
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Vertically center nav items */
+.navbar__items {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+
+}
+
+/* Vertically center and adjust nav item text */
+.navbar__item {
+  display: flex;
+  align-items: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
+  line-height: 22px !important; /* Match logo height */
+  height: 32px !important;
+  padding: 0 8px;
+  margin: 5px 0px 0px 0px; /* Add right margin for spacing */
+
+}
+

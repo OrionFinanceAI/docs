@@ -5,263 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matteo Manzi CV">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
     <title>Orion Finance CV</title>
     <style>
-        /* Modern CSS reset and base styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            height: 100%;
-            font-family: "Inter", sans-serif;
-            background-color: #fbf8ef;
-        }
-
-        /* Add font styles for headings */
-        h1, h2, h3, h4, h5, h6, .nav-bar a {
-            font-family: "EB Garamond", serif;
-        }
-
-        /* Container for better organization */
-        .container {
-            height: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        /* Main content container */
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 95vw;
-            height: 75vh;
-            margin: 0 auto;
-        }
-
-        /* Navigation bar styling */
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            padding: 10px;
-            background-color: #2a5296;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 1px solid black;
-            position: relative;
-            min-height: 60px;
-        }
-
-        .nav-bar .logo {
-            height: 40px;
-            width: auto;
-            margin-left: 10px;
-            z-index: 2;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            justify-content: flex-end;
-            margin: 0;
-            padding: 0 30px;
-        }
-
-        .nav-bar a {
-            color: #fbf8ef;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 5px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .nav-bar a:not(:has(.logo)):hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-bar a.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        /* Add this new style */
-        .nav-bar a:focus {
-            outline: none;
-        }
-
-        .nav-bar a:active {
-            background-color: transparent;
-        }
-
-        /* Mobile Responsive Styles */
-        @media screen and (max-width: 1024px) {
-            .container {
-                padding: 4vw 2vw;
-                gap: 12px;
-            }
-            .nav-bar {
-                flex-direction: column;
-                align-items: center;
-                padding: 8px 2vw;
-                gap: 6px;
-                min-height: unset;
-                border-radius: 14px;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                position: relative;
-            }
-            .nav-bar .logo {
-                height: 28px;
-                margin: 0 auto 4px auto;
-                display: block;
-            }
-            .nav-links {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                padding: 10px 0;
-                width: 100%;
-                align-items: center;
-                position: static;
-                background: none;
-                box-shadow: none;
-                border-radius: 0;
-                animation: none;
-            }
-            .nav-bar a {
-                font-size: 1.05rem;
-                width: 100%;
-                text-align: center;
-                padding: 7px 0;
-                margin: 0;
-            }
-            .pdf-container {
-                max-width: 100% !important;
-                width: 100% !important;
-                margin: 0 !important;
-                margin-bottom: 10px;
-                border-radius: 0;
-                height: 48vh;
-                min-height: 220px;
-            }
-        }
-
-        /* Tablet Responsive Styles */
-        @media screen and (min-width: 769px) and (max-width: 1024px) {
-            .pdf-container {
-                max-width: 100%;
-                height: 70vh;
-            }
-        }
-
-        /* PDF viewer container */
         .pdf-container {
-            background-color: #fbf8ef;
-            border-radius: 8px;
-            border: 1px solid black;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: calc(100vh - 80px); /* Adjust based on your navbar height */
             overflow: hidden;
-            max-width: 60%;
-            margin: 0 auto;
-            width: 100%;
         }
-
-        /* Responsive iframe */
-        iframe {
-            border: none;
+        #pdfViewer {
             width: 100%;
             height: 100%;
-            display: block;
-            flex: 1;
-        }
-
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            display: none;
-            color: #2a5296;
-            font-family: "EB Garamond", Times, serif;
-        }
-
-        iframe:not(:loaded) + .loading {
-            display: block;
-        }
-
-        /* Authentication overlay */
-        .auth-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fbf8ef;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .auth-container {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border: 2px solid #2a5296;
-            text-align: center;
-        }
-
-        .auth-container input {
-            margin: 1rem 0;
-            padding: 0.5rem;
-            width: 200px;
-            border: 1px solid #2a5296;
-            border-radius: 4px;
-        }
-
-        .auth-container button {
-            background-color: #2a5296;
-            color: white;
             border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
         }
-
-        .auth-container button:hover {
-            background-color: #1a4286;
-        }
-
-        @media screen and (min-width: 1025px) {
+        @media (max-width: 768px) {
             .pdf-container {
-                height: 80vh;
+                height: calc(100vh - 60px);
+            }
+            #pdfViewer {
+                -webkit-overflow-scrolling: touch;
             }
         }
-
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html">
-                <img src="img/OF_lockup_yellow.png" alt="Orion Finance Logo" class="logo">
-            </a>
-            <div class="nav-links">
-                <a href="/docs/introduction/orion">Documentation</a>
-                <a href="pitch.html" target="_blank">Pitch Deck</a>
-                <a href="tearsheet.html">Tearsheets</a>
-                <a href="tech.html">Tech Stack</a>
-                <a href="cv.html" class="active">CEO CV</a>
+    <div class="container cv-container">
+        <div class="bg-overlay"></div>
+        <nav class="navbar">
+            <div class="logoNav">
+                <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
             </div>
+            <ul class="navLinks">
+                <li><a href="/docs/introduction/orion">Docs</a></li>
+                <!--    <li><a href="https://discord.gg/8bAXxPSPdw">Discord</a></li>-->
+                <li><a href="pitch.html">Pitch Deck</a></li>
+                <li><a href="tearsheet.html">Tearsheets</a></li>
+                <li><a href="tech.html">Tech Stack</a></li>
+                <li><a href="cv.html" class="active">CEO CV</a></li>
+            </ul>
         </nav>
         <div class="pdf-container">
-            <iframe src="files/Matteo_Manzi___CV_compressed.pdf#toolbar=1&navpanes=0&scrollbar=0&view=FitH" title="Orion Finance CV" id="pdfViewer"></iframe>
+            <iframe src="files/Matteo_Manzi_CV.pdf#toolbar=0&view=FitH&scrollbar=1" title="Orion Finance CV" id="pdfViewer"></iframe>
             <div class="loading">Loading PDF...</div>
         </div>
     </div>
@@ -269,7 +53,7 @@
     <script>
         function loadPDF() {
             const iframe = document.getElementById('pdfViewer');
-            const pdfPath = 'files/Matteo_Manzi___CV_compressed.pdf#toolbar=0&view=FitV';
+            const pdfPath = 'files/Matteo_Manzi_CV.pdf#toolbar=0&view=FitH&scrollbar=1';
             
             iframe.src = pdfPath;
             
