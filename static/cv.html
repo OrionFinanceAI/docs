@@ -5,131 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matteo Manzi CV">
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
     <title>Orion Finance CV</title>
-    <style>
-        /* Modern CSS reset and base styles */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html, body {
-            height: 100%;
-            font-family: "Inter", sans-serif;
-            background-color: #000;
-            color: #fff;
-            background-image: url('img/background_1.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Add font styles for headings */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "EB Garamond", serif;
-        }
-
-        /* Container for better organization */
-        .container {
-            height: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .bg-overlay {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.593); /* adjust opacity as needed */
-            z-index: 0;
-            pointer-events: none;
-            border-radius: 8px;
-        }
-
-        /* Navigation bar styling */
-        .navbar {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 2.5rem 4vw 1.5rem 4vw;
-            background: transparent;
-            position: relative;
-            z-index: 1;
-        }
-        .logoNav {
-            display: flex;
-            align-items: center;
-        }
-        .logo {
-            height: 2.5rem;
-            margin-right: 1.1rem;
-        }
-        .navLinks {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .navLinks li a {
-            color: #fff;
-            font-size: 1.15rem;
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.2s;
-        }
-        .navLinks li a:hover, .navLinks li a.active {
-            color: #457ddd;
-        }
-
-        /* PDF viewer container */
-        .pdf-container {
-            flex: 1;
-            width: 50vw;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        /* Responsive iframe */
-        iframe {
-            border: none;
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        /* Loading state */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            display: none;
-            color: #fff;
-            font-family: "EB Garamond", Times, serif;
-        }
-
-        iframe:not(:loaded) + .loading {
-            display: block;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container cv-container">
         <div class="bg-overlay"></div>
         <nav class="navbar">
             <div class="logoNav">
-                <img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo">
+                <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
             </div>
             <ul class="navLinks">
                 <li><a href="/docs/introduction/orion">Docs</a></li>
