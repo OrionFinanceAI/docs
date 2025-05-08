@@ -7,6 +7,26 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <title>Orion Finance Tearsheets</title>
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 140px); /* Adjust based on your navbar and controls height */
+            overflow: hidden;
+        }
+        #pdfViewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media (max-width: 768px) {
+            .pdf-container {
+                height: calc(100vh - 120px);
+            }
+            #pdfViewer {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="bg-overlay"></div>
@@ -38,7 +58,7 @@
                 <button class="centered-button" onclick="downloadPDF()">Download Tearsheet</button>
             </div>
             <div class="pdf-container">
-                <iframe src="files/backtest/1_tearsheet.pdf#toolbar=0&view=FitH" title="Orion Finance Tearsheet" id="pdfViewer"></iframe>
+                <iframe src="files/backtest/1_tearsheet.pdf#toolbar=0&view=FitH&scrollbar=1" title="Orion Finance Tearsheet" id="pdfViewer"></iframe>
                 <div class="loading">Loading PDF...</div>
             </div>
         </div>
@@ -68,7 +88,7 @@
                     break;                    
             }
             
-            pdfPath += '#toolbar=0&view=FitH';
+            pdfPath += '#toolbar=0&view=FitH&scrollbar=1';
             iframe.src = pdfPath;
             
             iframe.onerror = function() {
