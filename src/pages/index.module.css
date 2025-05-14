@@ -238,6 +238,28 @@
   z-index: 110;
 }
 
+.navDownloadButton {
+  display: inline !important;
+  margin: 0 auto 20px !important;
+  padding: 8px 16px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #e0dfdf !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1rem !important;
+  transition: background-color 0.3s !important;
+  text-align: center !important;
+  text-decoration: none !important;
+}
+.navDownloadButton:hover {
+  background-color: #ebf0fb !important;
+  color: #000000 !important;
+  border: 1.5px solid #ffffff00 !important;
+
+}
+
 @media (min-width: 901px) {
   .navbar {
     display: flex !important;
@@ -294,6 +316,10 @@
   }
   .navLinks {
     display: none;
+  }
+
+  .menu .navDownloadButton {
+    color: #000 !important;
   }
 }
 
