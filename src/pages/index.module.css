@@ -244,7 +244,7 @@
   padding: 8px 16px !important;
   background-color: #ffffff !important;
   color: #000000 !important;
-  border: 1.5px solid #e0dfdf !important;
+  border: 2px solid #e0dfdf !important;
   border-radius: 20px !important;
   cursor: pointer !important;
   font-family: "Inter", sans-serif !important;
@@ -252,11 +252,14 @@
   transition: background-color 0.3s !important;
   text-align: center !important;
   text-decoration: none !important;
+  transition: color 0.2s !important;
+  opacity: 1 !important;
+
 }
 .navDownloadButton:hover {
-  background-color: #ebf0fb !important;
-  color: #000000 !important;
-  border: 1.5px solid #ffffff00 !important;
+  background-color: #f0f4fc !important;
+  color: #0c58dc !important;
+  border: 2px solid #ffffff00 !important;
 
 }
 
