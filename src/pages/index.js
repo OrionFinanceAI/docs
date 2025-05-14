@@ -40,11 +40,10 @@ export default function Home() {
             <img src="/img/OF_lockup_white.png" alt="Orion Finance Logo" className={styles.logo} />
           </div>
           <ul className={styles.navLinks}>
-            <li><a href="/docs/introduction/orion">Docs</a></li>
-            <li><a href="pitch.html">Pitch Deck</a></li>
-            <li><a href="tearsheet.html">Tearsheets</a></li>
-            <li><a href="tech.html">Tech Stack</a></li>
-            <li><a href="cv.html">CEO CV</a></li>
+            <li><a href="/docs/introduction/orion" target="_blank">Docs</a></li>
+            <li><a href="https://discord.gg/8bAXxPSPdw" target="_blank">Discord</a></li>
+            <li><a href="dataroom.html" target="_blank">Data Room</a></li>
+            <li><a href="app.html" target="_blank">Launch App</a></li>
           </ul>
           <button
             className={styles.hamburger}
@@ -68,11 +67,10 @@ export default function Home() {
             &times;
           </button>
           <ul>
-            <li><a href="/docs/introduction/orion" onClick={() => setIsMenuOpen(false)}>Docs</a></li>
-            <li><a href="pitch.html" onClick={() => setIsMenuOpen(false)}>Pitch Deck</a></li>
-            <li><a href="tearsheet.html" onClick={() => setIsMenuOpen(false)}>Tearsheets</a></li>
-            <li><a href="tech.html" onClick={() => setIsMenuOpen(false)}>Tech Stack</a></li>
-            <li><a href="cv.html" onClick={() => setIsMenuOpen(false)}>CEO CV</a></li>
+            <li><a href="/docs/introduction/orion" target="_blank" onClick={() => setIsMenuOpen(false)}>Docs</a></li>
+            <li><a href="https://discord.gg/8bAXxPSPdw" target="_blank" onClick={() => setIsMenuOpen(false)}>Discord</a></li>
+            <li><a href="dataroom.html" target="_blank" onClick={() => setIsMenuOpen(false)}>Data Room</a></li>
+            <li><a href="app.html" target="_blank" onClick={() => setIsMenuOpen(false)}>Launch App</a></li>
           </ul>
         </div>
 

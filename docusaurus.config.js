@@ -101,40 +101,30 @@ const config = {
             title: 'Discover',
             items: [
               {
-                label: 'Pitch Deck',
-                href: '/pitch.html',
+                label: 'Launch App',
+                href: '/app.html',
                 target: '_blank',
               },
               {
-                label: 'Tearsheets',
-                href: '/tearsheet.html',
-                target: '_blank',
-              },
-              {
-                label: 'Tech Stack',
-                href: '/tech.html',
-                target: '_blank',
-              },
-              {
-                label: 'CEO CV',
-                href: '/cv.html',
+                label: 'Data Room',
+                href: '/dataroom.html',
                 target: '_blank',
               }
             ],
           },
-          // {
-          //   title: 'Connect',
-          //   items: [
-          //     // {
-          //     //   label: 'Discord',
-          //     //   href: 'https://discord.gg/8bAXxPSPdw',
-          //     // },
+          {
+            title: 'Connect',
+            items: [
+              {
+                label: 'Discord',
+                href: 'https://discord.gg/8bAXxPSPdw',
+              },
           //     // {
           //     //   label: 'X',
           //     //   href: 'https://x.com/docusaurus',
           //     // },
-          //   ],
-          // },
+            ],
+          },
         ],
       },
     }),

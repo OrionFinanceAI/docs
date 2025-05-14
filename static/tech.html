@@ -1,72 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tech Stack" />
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Orion Finance Tech Stack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0;url=dataroom.html">
+    <title>Access Orion Data Room...</title>
+    <script>
+        // Redirect to local dataroom page
+        window.location.href = "dataroom.html";
+    </script>
 </head>
 <body>
-  <div class="bg-overlay"></div>
-  <div class="container">
-    <nav class="navbar">
-      <div class="logoNav">
-        <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
-      </div>
-      <ul class="navLinks">
-        <li><a href="/docs/introduction/orion">Docs</a></li>
-        <!--    <li><a href="https://discord.gg/8bAXxPSPdw">Discord</a></li>-->
-        <li><a href="pitch.html">Pitch Deck</a></li>
-        <li><a href="tearsheet.html">Tearsheets</a></li>
-        <li><a href="tech.html" class="active">Tech Stack</a></li>
-        <li><a href="cv.html">CEO CV</a></li>
-      </ul>
-    </nav>
-
-    <div class="svg-viewer">
-      <div class="svg-title" id="svgTitle">Loading...</div>
-      <div class="controls">
-        <button class="centered-button" onclick="previousSVG()">Previous</button>
-        <button class="centered-button" onclick="nextSVG()">Next</button>
-      </div>
-      <div class="svg-frame">
-        <img id="svgImage" src="" alt="SVG Diagram" />
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const svgFiles = [
-      { file: "tech/dp.svg", title: "Data Pipeline" },
-      { file: "tech/pm.svg", title: "Portfolio Manager" },
-      { file: "tech/ff.svg", title: "FlowFolio" },
-      { file: "tech/qa.svg", title: "Quant Analysis" },
-      { file: "tech/utils.svg", title: "Utils" },
-    ];
-
-    let currentIndex = 0;
-
-    function loadSVG(index) {
-      const { file, title } = svgFiles[index];
-      document.getElementById("svgImage").src = file;
-      document.getElementById("svgTitle").textContent = title;
-    }
-
-    function previousSVG() {
-      currentIndex = (currentIndex - 1 + svgFiles.length) % svgFiles.length;
-      loadSVG(currentIndex);
-    }
-
-    function nextSVG() {
-      currentIndex = (currentIndex + 1) % svgFiles.length;
-      loadSVG(currentIndex);
-    }
-
-    window.onload = () => {
-      loadSVG(currentIndex);
-    };
-  </script>
+    <h1>Redirecting...</h1>
+    <p>If you are not redirected, <a href="dataroom.html">click here</a>.</p>
 </body>
 </html>
