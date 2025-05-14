@@ -4,11 +4,11 @@ import { useLocation } from '@docusaurus/router';
 
 export default function Root({children}) {
   const location = useLocation();
-  const isLanding = location.pathname === '/';
+  const noStars = location.pathname === '/' || location.pathname.startsWith('/app');
 
   return (
     <>
-      {!isLanding && <StarryBackground />}
+      {!noStars && <StarryBackground />}
       {children}
     </>
   );

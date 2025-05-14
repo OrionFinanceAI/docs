@@ -35,14 +35,6 @@
             <div class="logoNav">
                 <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
             </div>
-            <ul class="navLinks">
-                <li><a href="/docs/introduction/orion">Docs</a></li>
-                <!--    <li><a href="https://discord.gg/8bAXxPSPdw">Discord</a></li>-->
-                <li><a href="pitch.html">Pitch Deck</a></li>
-                <li><a href="tearsheet.html" class="active">Tearsheets</a></li>
-                <li><a href="tech.html">Tech Stack</a></li>
-                <li><a href="cv.html">CEO CV</a></li>
-            </ul>
         </nav>
         <div class="main-content">
             <div class="pdf-controls">
@@ -50,6 +42,7 @@
                     <select id="chainprotocolSelect" class="centered-button" onchange="handleProtocolChange()">
                         <option value="1">1 - Ethereum</option>
                         <option value="10">10 - Optimism</option>
+                        <option value="137">137 - Polygon</option>
                         <option value="146">146 - Sonic</option>
                         <option value="8453">8453 - Base</option>
                         <option value="42161">42161 - Arbitrum</option>
@@ -76,6 +69,9 @@
                     break;
                 case '10':
                     pdfPath = 'files/backtest/10_tearsheet.pdf';
+                    break;
+                case '137':
+                    pdfPath = 'files/backtest/137_tearsheet.pdf';
                     break;
                 case '146':
                     pdfPath = 'files/backtest/146_tearsheet.pdf';
