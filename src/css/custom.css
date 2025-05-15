@@ -97,7 +97,7 @@ font-family: "EB Garamond", serif;
   align-items: center;
   height: 32px; /* Reduce logo height */
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 22px; /* Add left margin to move logo right */
 }
 .navbar__logo img {
   height: 32px; /* Match the container */
@@ -118,14 +118,304 @@ font-family: "EB Garamond", serif;
 
 /* Vertically center and adjust nav item text */
 .navbar__item {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  transition: color 0.2s !important;
   display: flex;
   align-items: center;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.25rem;
-  line-height: 22px !important; /* Match logo height */
-  height: 32px !important;
-  padding: 0 8px;
-  margin: 5px 0px 0px 0px; /* Add right margin for spacing */
-
+  justify-content: center;
+  height: 36px !important;
 }
 
+/* --- GitBook-like Sidebar --- */
+
+/* Sidebar container */
+.theme-doc-sidebar-container {
+  width: 250px !important;
+  background: #18191a;
+  border-right: 1px solid #232323;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  height: calc(100vh - 56px - 80px); /* Adjust 80px if your footer is taller/shorter */
+  max-height: none;
+  position: sticky;
+  top: 0.1px; /* Height of navbar */
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden !important;
+}
+
+/* Sidebar category header */
+.menu__category {
+  font-weight: 600;
+  font-size: 0.9em;
+  margin: 1.7em 0 0.7em 1.2em;
+  color: #fff;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+/* Sidebar links */
+.menu__link {
+  padding-left: 2.2em;
+  font-size: 0.9em;
+  color: #b0b0b0;
+  border-radius: 6px;
+  margin: 2px 0;
+  transition: background 0.15s, color 0.15s;
+  white-space: normal;
+  word-break: break-word;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.menu__link--active, .menu__link:hover {
+  background: #232323;
+  color: #4196fd;
+}
+
+/* Sidebar spacers */
+.menu__spacer {
+  margin: 1.2em 0 1.2em 0.8em;
+  border-bottom: 1px solid #232323;
+  height: 1px;
+  background: none;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background: #18191a !important;
+  border-bottom: 1px solid #232323;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  min-height: 56px;
+}
+.navbar__logo {
+  margin-right: 1.5em;
+  height: 36px;
+}
+.navbar__items {
+  align-items: center;
+}
+.navbar__search {
+  margin-left: 1.5em;
+  min-width: 260px;
+}
+
+/* --- General Font --- */
+body, .navbar, .theme-doc-sidebar-container, .menu__link, .menu__category {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Optional: Make sidebar scrollable if content overflows --- */
+.theme-doc-sidebar-container {
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+/* --- Optional: Improve search bar appearance --- */
+.DocSearch-Button, .navbar__search-input {
+  background: #232323 !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  border: none !important;
+  font-size: 1em;
+}
+
+/* --- Optional: Hide Docusaurus default sidebar shadow --- */
+.theme-doc-sidebar-container {
+  box-shadow: none !important;
+}
+
+/* Make the main layout a flex column */
+.docusaurus-wrapper,
+#__docusaurus {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make the main content area (sidebar + content) take all available space */
+.main-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+}
+
+/* Sidebar and content area should both stretch to fill the main-wrapper */
+.theme-doc-sidebar-container {
+  height: 100%;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-doc-sidebar-menu {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden !important;
+  overflow-y: auto;
+}
+
+/* Ensure the footer stays at the bottom */
+.footer {
+  flex-shrink: 0;
+  background: #18191a !important;
+  color: #fff;
+}
+
+/* Navbar custom styles */
+.navbar__items--right {
+  gap: 1.45rem;
+  margin-right: 1.5rem;
+}
+
+.navbar__item:hover {
+  color: #457ddd !important;
+}
+
+/* Launch App button styles */
+.navbar__item[href="/app.html"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto !important;
+  padding: 6px 18px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #e0dfdf !important;
+  border-radius: 20px !important;
+  cursor: pointer !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 0.98rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  height: 36px !important;
+  min-width: 110px;
+}
+
+.navbar__item[href="/app.html"]:hover {
+  background-color: #f0f4fc !important;
+  color: #0c58dc !important;
+  border: 2px solid #ffffff00 !important;
+}
+
+/* Docs link styles */
+.nav-link {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #fff !important;
+  transition: color 0.2s !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px !important;
+}
+
+.nav-link:hover {
+  color: #457ddd !important;
+}
+
+/* Highlight the active Docs navbar link in blue */
+.navbar__item.nav-link.active,
+.navbar__item.nav-link--active,
+.navbar__item.nav-link[aria-current="page"] {
+  color: #4196fd !important;
+}
+
+/* Hide right navbar items on mobile */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    display: none !important;
+  }
+  /* Style mobile menu items at the bottom */
+  .navbar-sidebar__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  /* Style Launch App as a button in mobile menu */
+  .navbar-sidebar__items .navbar__item[href="/app.html"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 1.5rem 0 0 0 !important;
+    padding: 10px 20px !important;
+    background-color: #fff !important;
+    color: #000 !important;
+    border: 2px solid #e0dfdf !important;
+    border-radius: 20px !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    min-width: 140px;
+  }
+  .navbar-sidebar__items .navbar__item[href="/app.html"]:hover {
+    background-color: #f0f4fc !important;
+    color: #0c58dc !important;
+    border: 2px solid #ffffff00 !important;
+  }
+  /* Mobile footer bar for nav links */
+  .mobile-footer-bar {
+    position: static !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background: #18191a;
+    border-top: 1px solid #232323;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.12);
+  }
+  .mobile-footer-bar a {
+    color: #fff;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 16px;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+  .mobile-footer-bar a.active {
+    color: #4196fd;
+  }
+  .mobile-footer-bar a.launch-app {
+    background: #fff;
+    color: #000;
+    font-weight: 500;
+    border: 2px solid #e0dfdf;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+  }
+  .mobile-footer-bar a.launch-app:hover {
+    background: #f0f4fc;
+    color: #0c58dc;
+    border: 2px solid #ffffff00;
+    position: static !important;
+    box-shadow: none !important;
+    border-top: none !important;
+    margin-top: 2rem;
+  }
+  body {
+    padding-bottom: 0 !important; /* Prevent content from being hidden behind the bar */
+  }
+}
+
+@media (min-width: 997px) {
+  .mobile-footer-bar {
+    display: none !important;
+  }
+}

@@ -57,6 +57,10 @@ const config = {
     ],
   ],
 
+  plugins: [
+    // Removed local search plugin configuration
+  ],
+
   // Add static directory configuration
   staticDirectories: ['static', 'public'],
 
@@ -90,40 +94,27 @@ const config = {
           {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
-            position: 'left',
-            label: 'Documentation',
+            position: 'right',
+            label: 'Docs',
+            className: 'nav-link',
           },
-        ],
-      },
-      footer: {
-        links: [
+
           {
-            title: 'Discover',
-            items: [
-              {
-                label: 'Launch App',
-                href: '/app.html',
-                target: '_blank',
-              },
-              {
-                label: 'Data Room',
-                href: '/dataroom.html',
-                target: '_blank',
-              }
-            ],
+            label: 'Discord',
+            href: 'https://discord.gg/8bAXxPSPdw',
+            position: 'right',
           },
           {
-            title: 'Connect',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/8bAXxPSPdw',
-              },
-          //     // {
-          //     //   label: 'X',
-          //     //   href: 'https://x.com/docusaurus',
-          //     // },
-            ],
+            label: 'Data Room',
+            href: '/dataroom.html',
+            position: 'right',
+            target: '_blank',
+          },
+          {
+            label: 'Launch App',
+            href: '/app.html',
+            position: 'right',
+            target: '_blank',
           },
         ],
       },
