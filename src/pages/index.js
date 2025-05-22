@@ -81,7 +81,7 @@ export default function Home() {
               Institutional-grade<br />Portfolio <br /> Management <br />in DeFi
             </h1>
             <p className={styles.heroSubtitle}>
-              Permissionless vault infrastructure for<br /> verifiable, privacy-preserving portfolio management.
+              Permissionless vault infrastructure for verifiable,<br /> privacy-preserving portfolio management.
             </p>
           </main>
         )}
