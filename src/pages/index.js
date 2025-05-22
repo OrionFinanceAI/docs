@@ -16,9 +16,9 @@ export default function Home() {
         <title>Orion Finance</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Orion Finance - Permissionless vault infrastructure for intelligent, privacy-preserving portfolio management." />
+        <meta name="description" content="Orion Finance - Permissionless vault infrastructure for verifiable, privacy-preserving portfolio management." />
         <meta property="og:title" content="Orion Finance - DeFi Asset Management" />
-        <meta property="og:description" content="Permissionless vault infrastructure for intelligent, privacy-preserving portfolio management." />
+        <meta property="og:description" content="Permissionless vault infrastructure for verifiable, privacy-preserving portfolio management." />
         <meta property="og:type" content="website" />
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
       </Head>
@@ -81,7 +81,7 @@ export default function Home() {
               Institutional-grade<br />Portfolio <br /> Management <br />in DeFi
             </h1>
             <p className={styles.heroSubtitle}>
-              Permissionless vault infrastructure for<br /> intelligent, privacy-preserving portfolio management.
+              Permissionless vault infrastructure for<br /> verifiable, privacy-preserving portfolio management.
             </p>
           </main>
         )}
