@@ -31,7 +31,7 @@ Orion integrates advancements in cryptography[^1] [^2] to power private vault st
 
 Transaction inputs and on-chain states are encrypted, ensuring that sensitive information remains confidential, while **fully onchain**, **non-custodial** and **verifiable** by anyone.
 
-![Architecture](../../static/img/architecture.png)
+![Architecture](../../static/img/privacy_no_bg.png)
 
 ## Technical Overview
 
