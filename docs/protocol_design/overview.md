@@ -34,7 +34,7 @@ This abstraction allows everyday users to access intelligent portfolios without 
 Vaults can be used as:
 - **DeFi fund of funds**: Orion vaults will be used as building blocks of more structured products.
 
-- **Lending and borrowing**: Orion will connect with leading lending protocols, enabling users to use LP shares as collateral.
+- **Lending and borrowing**: Orion will connect with leading lending protocols, enabling users to use [LP shares as collateral](https://evc.wtf/).
 
 - **Liquidity provisioning**: Orion incentivizes users to provide liquidity to Automatic Market Making pools.
 
