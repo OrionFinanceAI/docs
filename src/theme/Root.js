@@ -10,14 +10,14 @@ function MobileFooterBar() {
       <a href="/docs/introduction/orion" className="active">Docs</a>
       <a href="https://discord.gg/8bAXxPSPdw" target="_blank" rel="noopener noreferrer">Discord</a>
       <a href="/dataroom.html" target="_blank" rel="noopener noreferrer">Data Room</a>
-      <a href="/app.html" target="_blank" rel="noopener noreferrer" className="launch-app">Launch App</a>
+      <a href="https://app.orionfinance.ai/" target="_blank" rel="noopener noreferrer" className="launch-app">Launch App</a>
     </div>
   ) : null;
 }
 
 export default function Root({children}) {
   const location = useLocation();
-  const noStars = location.pathname === '/' || location.pathname.startsWith('/app');
+  const noStars = location.pathname === '/' || location.pathname.startsWith('/app') || location.pathname.startsWith('/tearsheet');
 
   return (
     <>

@@ -3,15 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=dataroom.html">
-    <title>Access Orion App...</title>
-    <script>
-        // Redirect to local dataroom page
-        window.location.href = "app.html";
-    </script>
+    <meta name="description" content="Orion Finance Tearsheets - Financial Documentation">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Orion Finance Tearsheets</title>
+    <style>
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 140px); /* Adjust based on your navbar and controls height */
+            overflow: hidden;
+        }
+        #pdfViewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        @media (max-width: 768px) {
+            .pdf-container {
+                height: calc(100vh - 120px);
+            }
+            #pdfViewer {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a href="app.html">click here</a>.</p>
+    <div class="bg-overlay"></div>
+    <div class="container tearsheet-container">
+        <nav class="navbar">
+            <div class="logoNav">
+                <a href="/"><img src="img/OF_lockup_white.png" alt="Orion Finance Logo" class="logo" /></a>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="pdf-controls">
+                <div class="select-wrapper">
+                    <select id="chainprotocolSelect" class="centered-button" onchange="handleProtocolChange()">
+                        <option value="1">1 - Ethereum</option>
+                        <option value="10">10 - Optimism</option>
+                        <option value="137">137 - Polygon</option>
+                        <option value="146">146 - Sonic</option>
+                        <option value="8453">8453 - Base</option>
+                        <option value="42161">42161 - Arbitrum</option>
+                    </select>
+                </div>
+                <button class="centered-button" onclick="downloadPDF()">Download Tearsheet</button>
+            </div>
+            <div class="pdf-container">
+                <iframe src="files/backtest/1_tearsheet.pdf#toolbar=0&view=FitH&scrollbar=1" title="Orion Finance Tearsheet" id="pdfViewer"></iframe>
+                <div class="loading">Loading PDF...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadPDF() {
+            const iframe = document.getElementById('pdfViewer');
+            const protocol = document.getElementById('chainprotocolSelect').value;
+            let pdfPath;
+            
+            switch(protocol) {
+                case '1':
+                    pdfPath = 'files/backtest/1_tearsheet.pdf';
+                    break;
+                case '10':
+                    pdfPath = 'files/backtest/2_tearsheet.pdf';
+                    break;
+                case '137':
+                    pdfPath = 'files/backtest/4_tearsheet.pdf';
+                    break;
+                case '146':
+                    pdfPath = 'files/backtest/5_tearsheet.pdf';
+                    break;
+                case '8453':
+                    pdfPath = 'files/backtest/6_tearsheet.pdf';
+                    break;
+                case '42161':
+                    pdfPath = 'files/backtest/7_tearsheet.pdf';
+                    break;                    
+            }
+            
+            pdfPath += '#toolbar=0&view=FitH&scrollbar=1';
+            iframe.src = pdfPath;
+            
+            iframe.onerror = function() {
+                console.error('Error loading PDF');
+                document.querySelector('.loading').textContent = 'Error loading PDF. Please try again later.';
+            };
+        }
+
+        function handleProtocolChange() {
+            loadPDF();
+        }
+        window.onload = function() {
+            loadPDF();
+        }
+
+        function downloadPDF() {
+            const iframe = document.getElementById('pdfViewer');
+            const currentPDF = iframe.src.split('#')[0]; // Remove the toolbar parameters
+            window.open(currentPDF, '_blank');
+        }
+    </script>
 </body>
 </html>

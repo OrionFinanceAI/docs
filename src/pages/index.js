@@ -43,7 +43,8 @@ export default function Home() {
               <li><a href="/docs/introduction/orion" target="_blank">Docs</a></li>
               <li><a href="https://discord.gg/8bAXxPSPdw" target="_blank">Discord</a></li>
               <li><a href="dataroom.html" target="_blank">Data Room</a></li>
-              <li><a href="app.html" target="_blank" className={styles.navDownloadButton}>Launch App</a></li>
+              <li><a href="/tearsheet.html" target="_blank">Tearsheets</a></li>
+              <li><a href="https://app.orionfinance.ai/" target="_blank" className={styles.navDownloadButton}>Launch App</a></li>
             </ul>
           <button
             className={styles.hamburger}
@@ -70,7 +71,8 @@ export default function Home() {
             <li><a href="/docs/introduction/orion" target="_blank" onClick={() => setIsMenuOpen(false)}>Docs</a></li>
             <li><a href="https://discord.gg/8bAXxPSPdw" target="_blank" onClick={() => setIsMenuOpen(false)}>Discord</a></li>
             <li><a href="dataroom.html" target="_blank" onClick={() => setIsMenuOpen(false)}>Data Room</a></li>
-            <li><a href="app.html" target="_blank" className={styles.navDownloadButton} onClick={() => setIsMenuOpen(false)}>Launch App</a></li>
+            <li><a href="/tearsheet.html" target="_blank" onClick={() => setIsMenuOpen(false)}>Tearsheets</a></li>
+            <li><a href="https://app.orionfinance.ai/" target="_blank" className={styles.navDownloadButton} onClick={() => setIsMenuOpen(false)}>Launch App</a></li>
           </ul>
         </div>
 

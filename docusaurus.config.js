@@ -103,16 +103,11 @@ const config = {
             label: 'Discord',
             href: 'https://discord.gg/8bAXxPSPdw',
             position: 'right',
-          },
-          {
-            label: 'Data Room',
-            href: '/dataroom.html',
-            position: 'right',
             target: '_blank',
           },
           {
             label: 'Launch App',
-            href: '/app.html',
+            href: 'https://app.orionfinance.ai',
             position: 'right',
             target: '_blank',
           },
